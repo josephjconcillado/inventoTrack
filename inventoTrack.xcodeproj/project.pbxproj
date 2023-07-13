@@ -9,21 +9,39 @@
 /* Begin PBXBuildFile section */
 		0561F5632A6076EE00B70A20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0561F5622A6076EE00B70A20 /* AppDelegate.swift */; };
 		0561F5652A6076EE00B70A20 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0561F5642A6076EE00B70A20 /* SceneDelegate.swift */; };
-		0561F5672A6076EE00B70A20 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0561F5662A6076EE00B70A20 /* ViewController.swift */; };
 		0561F56A2A6076EE00B70A20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0561F5682A6076EE00B70A20 /* Main.storyboard */; };
 		0561F56C2A6076F000B70A20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0561F56B2A6076F000B70A20 /* Assets.xcassets */; };
 		0561F56F2A6076F000B70A20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0561F56D2A6076F000B70A20 /* LaunchScreen.storyboard */; };
+		0561F57F2A6079AA00B70A20 /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0561F57E2A6079AA00B70A20 /* ProductsViewController.swift */; };
+		0561F5812A6079C500B70A20 /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0561F5802A6079C500B70A20 /* ReportViewController.swift */; };
+		0561F5832A6079D600B70A20 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0561F5822A6079D600B70A20 /* SettingsViewController.swift */; };
+		0561F5852A6079E900B70A20 /* BackupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0561F5842A6079E900B70A20 /* BackupViewController.swift */; };
+		0561F5872A607A0000B70A20 /* OnboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0561F5862A607A0000B70A20 /* OnboardViewController.swift */; };
+		0561F5892A607CD600B70A20 /* ProductDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0561F5882A607CD600B70A20 /* ProductDetailsViewController.swift */; };
+		0561F58B2A607CE700B70A20 /* AddProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0561F58A2A607CE700B70A20 /* AddProductViewController.swift */; };
+		0561F58D2A607D1400B70A20 /* AccountSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0561F58C2A607D1400B70A20 /* AccountSettingsViewController.swift */; };
+		0561F58F2A607D2C00B70A20 /* AboutSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0561F58E2A607D2C00B70A20 /* AboutSettingsViewController.swift */; };
+		0561F5932A607D7600B70A20 /* BarcodeScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0561F5922A607D7600B70A20 /* BarcodeScannerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0561F55F2A6076EE00B70A20 /* inventoTrack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = inventoTrack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0561F5622A6076EE00B70A20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0561F5642A6076EE00B70A20 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0561F5662A6076EE00B70A20 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0561F5692A6076EE00B70A20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0561F56B2A6076F000B70A20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0561F56E2A6076F000B70A20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0561F5702A6076F000B70A20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0561F57E2A6079AA00B70A20 /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
+		0561F5802A6079C500B70A20 /* ReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
+		0561F5822A6079D600B70A20 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		0561F5842A6079E900B70A20 /* BackupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupViewController.swift; sourceTree = "<group>"; };
+		0561F5862A607A0000B70A20 /* OnboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardViewController.swift; sourceTree = "<group>"; };
+		0561F5882A607CD600B70A20 /* ProductDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewController.swift; sourceTree = "<group>"; };
+		0561F58A2A607CE700B70A20 /* AddProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductViewController.swift; sourceTree = "<group>"; };
+		0561F58C2A607D1400B70A20 /* AccountSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSettingsViewController.swift; sourceTree = "<group>"; };
+		0561F58E2A607D2C00B70A20 /* AboutSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutSettingsViewController.swift; sourceTree = "<group>"; };
+		0561F5922A607D7600B70A20 /* BarcodeScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeScannerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +74,12 @@
 		0561F5612A6076EE00B70A20 /* inventoTrack */ = {
 			isa = PBXGroup;
 			children = (
+				0561F57D2A60791300B70A20 /* Extra */,
+				0561F57C2A6078FB00B70A20 /* Onboard */,
+				0561F57B2A6078DE00B70A20 /* Backup */,
+				0561F5792A6078C500B70A20 /* Settings */,
+				0561F5782A6078BC00B70A20 /* Report */,
+				0561F5772A6078B200B70A20 /* Products */,
 				0561F5762A60773D00B70A20 /* Main */,
 				0561F56B2A6076F000B70A20 /* Assets.xcassets */,
 				0561F5702A6076F000B70A20 /* Info.plist */,
@@ -68,11 +92,78 @@
 			children = (
 				0561F5622A6076EE00B70A20 /* AppDelegate.swift */,
 				0561F5642A6076EE00B70A20 /* SceneDelegate.swift */,
-				0561F5662A6076EE00B70A20 /* ViewController.swift */,
 				0561F5682A6076EE00B70A20 /* Main.storyboard */,
 				0561F56D2A6076F000B70A20 /* LaunchScreen.storyboard */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		0561F5772A6078B200B70A20 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0561F5912A607D5400B70A20 /* Data */,
+				0561F5902A607D4800B70A20 /* Barcode */,
+				0561F57E2A6079AA00B70A20 /* ProductsViewController.swift */,
+				0561F5882A607CD600B70A20 /* ProductDetailsViewController.swift */,
+				0561F58A2A607CE700B70A20 /* AddProductViewController.swift */,
+			);
+			path = Products;
+			sourceTree = "<group>";
+		};
+		0561F5782A6078BC00B70A20 /* Report */ = {
+			isa = PBXGroup;
+			children = (
+				0561F5802A6079C500B70A20 /* ReportViewController.swift */,
+			);
+			path = Report;
+			sourceTree = "<group>";
+		};
+		0561F5792A6078C500B70A20 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				0561F5822A6079D600B70A20 /* SettingsViewController.swift */,
+				0561F58C2A607D1400B70A20 /* AccountSettingsViewController.swift */,
+				0561F58E2A607D2C00B70A20 /* AboutSettingsViewController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		0561F57B2A6078DE00B70A20 /* Backup */ = {
+			isa = PBXGroup;
+			children = (
+				0561F5842A6079E900B70A20 /* BackupViewController.swift */,
+			);
+			path = Backup;
+			sourceTree = "<group>";
+		};
+		0561F57C2A6078FB00B70A20 /* Onboard */ = {
+			isa = PBXGroup;
+			children = (
+				0561F5862A607A0000B70A20 /* OnboardViewController.swift */,
+			);
+			path = Onboard;
+			sourceTree = "<group>";
+		};
+		0561F57D2A60791300B70A20 /* Extra */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extra;
+			sourceTree = "<group>";
+		};
+		0561F5902A607D4800B70A20 /* Barcode */ = {
+			isa = PBXGroup;
+			children = (
+				0561F5922A607D7600B70A20 /* BarcodeScannerViewController.swift */,
+			);
+			path = Barcode;
+			sourceTree = "<group>";
+		};
+		0561F5912A607D5400B70A20 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,9 +237,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0561F5672A6076EE00B70A20 /* ViewController.swift in Sources */,
+				0561F5852A6079E900B70A20 /* BackupViewController.swift in Sources */,
+				0561F58F2A607D2C00B70A20 /* AboutSettingsViewController.swift in Sources */,
+				0561F5932A607D7600B70A20 /* BarcodeScannerViewController.swift in Sources */,
+				0561F5872A607A0000B70A20 /* OnboardViewController.swift in Sources */,
 				0561F5632A6076EE00B70A20 /* AppDelegate.swift in Sources */,
+				0561F57F2A6079AA00B70A20 /* ProductsViewController.swift in Sources */,
+				0561F5812A6079C500B70A20 /* ReportViewController.swift in Sources */,
 				0561F5652A6076EE00B70A20 /* SceneDelegate.swift in Sources */,
+				0561F5832A6079D600B70A20 /* SettingsViewController.swift in Sources */,
+				0561F58D2A607D1400B70A20 /* AccountSettingsViewController.swift in Sources */,
+				0561F5892A607CD600B70A20 /* ProductDetailsViewController.swift in Sources */,
+				0561F58B2A607CE700B70A20 /* AddProductViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
