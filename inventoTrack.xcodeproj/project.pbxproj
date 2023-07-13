@@ -56,15 +56,23 @@
 		0561F5612A6076EE00B70A20 /* inventoTrack */ = {
 			isa = PBXGroup;
 			children = (
+				0561F5762A60773D00B70A20 /* Main */,
+				0561F56B2A6076F000B70A20 /* Assets.xcassets */,
+				0561F5702A6076F000B70A20 /* Info.plist */,
+			);
+			path = inventoTrack;
+			sourceTree = "<group>";
+		};
+		0561F5762A60773D00B70A20 /* Main */ = {
+			isa = PBXGroup;
+			children = (
 				0561F5622A6076EE00B70A20 /* AppDelegate.swift */,
 				0561F5642A6076EE00B70A20 /* SceneDelegate.swift */,
 				0561F5662A6076EE00B70A20 /* ViewController.swift */,
 				0561F5682A6076EE00B70A20 /* Main.storyboard */,
-				0561F56B2A6076F000B70A20 /* Assets.xcassets */,
 				0561F56D2A6076F000B70A20 /* LaunchScreen.storyboard */,
-				0561F5702A6076F000B70A20 /* Info.plist */,
 			);
-			path = inventoTrack;
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
