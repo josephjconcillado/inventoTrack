@@ -22,6 +22,7 @@
 		0561F58D2A607D1400B70A20 /* AccountSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0561F58C2A607D1400B70A20 /* AccountSettingsViewController.swift */; };
 		0561F58F2A607D2C00B70A20 /* AboutSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0561F58E2A607D2C00B70A20 /* AboutSettingsViewController.swift */; };
 		0561F5932A607D7600B70A20 /* BarcodeScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0561F5922A607D7600B70A20 /* BarcodeScannerViewController.swift */; };
+		0561F5952A60C53A00B70A20 /* OnboardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0561F5942A60C53A00B70A20 /* OnboardCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		0561F58C2A607D1400B70A20 /* AccountSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSettingsViewController.swift; sourceTree = "<group>"; };
 		0561F58E2A607D2C00B70A20 /* AboutSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutSettingsViewController.swift; sourceTree = "<group>"; };
 		0561F5922A607D7600B70A20 /* BarcodeScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeScannerViewController.swift; sourceTree = "<group>"; };
+		0561F5942A60C53A00B70A20 /* OnboardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				0561F5862A607A0000B70A20 /* OnboardViewController.swift */,
+				0561F5942A60C53A00B70A20 /* OnboardCollectionViewCell.swift */,
 			);
 			path = Onboard;
 			sourceTree = "<group>";
@@ -248,6 +251,7 @@
 				0561F5832A6079D600B70A20 /* SettingsViewController.swift in Sources */,
 				0561F58D2A607D1400B70A20 /* AccountSettingsViewController.swift in Sources */,
 				0561F5892A607CD600B70A20 /* ProductDetailsViewController.swift in Sources */,
+				0561F5952A60C53A00B70A20 /* OnboardCollectionViewCell.swift in Sources */,
 				0561F58B2A607CE700B70A20 /* AddProductViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

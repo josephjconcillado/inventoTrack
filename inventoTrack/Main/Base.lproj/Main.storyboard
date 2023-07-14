@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,22 +13,148 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="OnboardViewController" customModule="inventoTrack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appLogo" translatesAutoresizingMaskIntoConstraints="NO" id="d9p-oc-bt3">
+                                <rect key="frame" x="118.33333333333333" y="46.333333333333343" width="193.33333333333337" height="233.00000000000003"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="inventoTrack" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JtB-BN-kbf">
+                                <rect key="frame" x="107.66666666666669" y="245.33333333333337" width="215" height="35"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="25"/>
+                                <color key="textColor" red="0.58586436509999995" green="0.5258619189" blue="0.48786020279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CGh-rO-jzB">
+                                <rect key="frame" x="21.666666666666657" y="819.33333333333337" width="387" height="58.666666666666629"/>
+                                <color key="tintColor" red="0.58586436509999995" green="0.5258619189" blue="0.48786020279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Next" cornerStyle="capsule">
+                                    <fontDescription key="titleFontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="18"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="nxtBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TD5-rc-aeA"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hsX-ca-wNN">
+                                <rect key="frame" x="21.666666666666657" y="819.33333333333337" width="387" height="58.666666666666629"/>
+                                <color key="tintColor" red="0.58586436509999995" green="0.5258619189" blue="0.48786020279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Get Started" cornerStyle="capsule">
+                                    <fontDescription key="titleFontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="18"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="axP-fK-4sq" kind="presentation" modalPresentationStyle="fullScreen" id="aIr-fC-7WQ"/>
+                                </connections>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="C05-Mc-tO9">
+                                <rect key="frame" x="21.666666666666657" y="335" width="387" height="419.33333333333326"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="0f7-Jn-kgA">
+                                    <size key="itemSize" width="382" height="395.33333333333326"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="OnboardCollectionViewCell" id="Z0d-hC-qpc" customClass="OnboardCollectionViewCell" customModule="inventoTrack" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="12" width="382" height="395.33333333333326"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="382" height="395.33333333333326"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0ms-F1-RBG">
+                                                    <rect key="frame" x="0.0" y="0.0" width="382" height="276.66666666666669"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Easy Inventory Management" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MjK-gd-oaf">
+                                                    <rect key="frame" x="9.6666666666666572" y="286.33333333333331" width="362.66666666666674" height="47.333333333333314"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="18"/>
+                                                    <color key="textColor" red="0.58586436509999995" green="0.5258619189" blue="0.48786020279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seamlessly add, edit, and organize your inventory items" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SNM-P3-p0h">
+                                                    <rect key="frame" x="9.6666666666666572" y="336" width="362.66666666666674" height="59.333333333333314"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
+                                                    <color key="textColor" red="0.58586436509999995" green="0.5258619189" blue="0.48786020279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="0ms-F1-RBG" firstAttribute="centerX" secondItem="Z0d-hC-qpc" secondAttribute="centerX" id="MIA-03-KEl"/>
+                                            <constraint firstItem="SNM-P3-p0h" firstAttribute="height" secondItem="Z0d-hC-qpc" secondAttribute="height" multiplier="0.15" id="OnB-0Z-Yyr"/>
+                                            <constraint firstAttribute="bottom" secondItem="SNM-P3-p0h" secondAttribute="bottom" id="VsS-63-3ZO"/>
+                                            <constraint firstItem="0ms-F1-RBG" firstAttribute="height" secondItem="Z0d-hC-qpc" secondAttribute="height" multiplier="0.7" id="dRY-5R-fDe"/>
+                                            <constraint firstItem="SNM-P3-p0h" firstAttribute="firstBaseline" secondItem="MjK-gd-oaf" secondAttribute="baseline" constant="24" symbolType="layoutAnchor" id="fKZ-WK-37O"/>
+                                            <constraint firstItem="0ms-F1-RBG" firstAttribute="width" secondItem="Z0d-hC-qpc" secondAttribute="width" id="fhn-e5-WCE"/>
+                                            <constraint firstItem="MjK-gd-oaf" firstAttribute="height" secondItem="Z0d-hC-qpc" secondAttribute="height" multiplier="0.12" id="jPC-X6-zE5"/>
+                                            <constraint firstItem="MjK-gd-oaf" firstAttribute="width" secondItem="Z0d-hC-qpc" secondAttribute="width" multiplier="0.95" id="lpa-kw-dtV"/>
+                                            <constraint firstItem="SNM-P3-p0h" firstAttribute="centerX" secondItem="Z0d-hC-qpc" secondAttribute="centerX" id="meL-ZN-ivF"/>
+                                            <constraint firstItem="MjK-gd-oaf" firstAttribute="centerX" secondItem="SNM-P3-p0h" secondAttribute="centerX" id="nz3-C0-iKm"/>
+                                            <constraint firstItem="0ms-F1-RBG" firstAttribute="top" secondItem="Z0d-hC-qpc" secondAttribute="top" id="vog-YC-esO"/>
+                                            <constraint firstItem="SNM-P3-p0h" firstAttribute="width" secondItem="Z0d-hC-qpc" secondAttribute="width" multiplier="0.95" id="xDL-hc-mZn"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="slideDescriptionLbl" destination="SNM-P3-p0h" id="CIN-QS-ZUF"/>
+                                            <outlet property="slideImageView" destination="0ms-F1-RBG" id="Wnl-Qg-G9U"/>
+                                            <outlet property="slideTitleLbl" destination="MjK-gd-oaf" id="ksE-yv-F94"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" translatesAutoresizingMaskIntoConstraints="NO" id="fAJ-oq-HtR">
+                                <rect key="frame" x="64.666666666666686" y="757.33333333333337" width="301.00000000000006" height="36.333333333333371"/>
+                                <color key="pageIndicatorTintColor" red="0.58586436509999995" green="0.5258619189" blue="0.48786020279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="currentPageIndicatorTintColor" red="0.76676553489999999" green="0.47950476409999998" blue="0.26994159820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </pageControl>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hsX-ca-wNN" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.07" id="3sq-i2-puC"/>
+                            <constraint firstItem="fAJ-oq-HtR" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.0389805" id="6vN-md-tHy"/>
+                            <constraint firstItem="d9p-oc-bt3" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="0.34" id="7M6-f1-XWk"/>
+                            <constraint firstItem="d9p-oc-bt3" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="9PV-Gf-1vE"/>
+                            <constraint firstItem="JtB-BN-kbf" firstAttribute="top" secondItem="d9p-oc-bt3" secondAttribute="bottom" multiplier="0.85" constant="8" symbolic="YES" id="BpJ-2v-rFB"/>
+                            <constraint firstItem="hsX-ca-wNN" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="H87-XF-Trb"/>
+                            <constraint firstItem="C05-Mc-tO9" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.9" id="Hmz-RS-XgZ"/>
+                            <constraint firstItem="fAJ-oq-HtR" firstAttribute="top" secondItem="C05-Mc-tO9" secondAttribute="bottom" constant="3" id="IsE-2D-99N"/>
+                            <constraint firstItem="d9p-oc-bt3" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.25" id="LTI-GS-6GW"/>
+                            <constraint firstItem="JtB-BN-kbf" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="OBk-sR-lye"/>
+                            <constraint firstItem="fAJ-oq-HtR" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.7" id="OyQ-26-cgu"/>
+                            <constraint firstItem="d9p-oc-bt3" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.45" id="RWW-go-2NJ"/>
+                            <constraint firstItem="CGh-rO-jzB" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.9" id="VHK-mG-O7y"/>
+                            <constraint firstItem="C05-Mc-tO9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="0.7" id="VzC-bF-oGM"/>
+                            <constraint firstItem="fAJ-oq-HtR" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="XBU-VE-aYI"/>
+                            <constraint firstItem="C05-Mc-tO9" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="dwi-Yn-t6n"/>
+                            <constraint firstItem="hsX-ca-wNN" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.9" id="fxY-LV-Oqn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hsX-ca-wNN" secondAttribute="bottom" constant="20" id="iLe-gM-nH1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="CGh-rO-jzB" secondAttribute="bottom" constant="20" id="iQ2-zM-QYS"/>
+                            <constraint firstItem="JtB-BN-kbf" firstAttribute="centerX" secondItem="d9p-oc-bt3" secondAttribute="centerX" id="maT-7t-10p"/>
+                            <constraint firstItem="CGh-rO-jzB" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.07" id="mxT-MY-CSf"/>
+                            <constraint firstItem="CGh-rO-jzB" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="oOU-Z0-7Pm"/>
+                            <constraint firstItem="C05-Mc-tO9" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.5" id="rss-UF-2Ef"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="appLogo" destination="d9p-oc-bt3" id="xY6-bS-LIq"/>
+                        <outlet property="getStartedBtn" destination="hsX-ca-wNN" id="VwU-Dw-2IM"/>
+                        <outlet property="nextBtn" destination="CGh-rO-jzB" id="xaK-0H-gBu"/>
+                        <outlet property="onboardCollectionView" destination="C05-Mc-tO9" id="S3M-Uf-Iah"/>
+                        <outlet property="pageControl" destination="fAJ-oq-HtR" id="vpV-Sq-VNE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-727" y="-585"/>
+            <point key="canvasLocation" x="-728.37209302325584" y="-585.19313304721038"/>
         </scene>
         <!--Products View Controller-->
         <scene sceneID="ZHN-Ix-Io3">
             <objects>
                 <viewController id="w3G-uE-wET" customClass="ProductsViewController" customModule="inventoTrack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0MO-Ux-yL0">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="4uF-gr-hK1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -43,7 +169,7 @@
             <objects>
                 <viewController id="ZHG-Tt-Z1c" customClass="ProductDetailsViewController" customModule="inventoTrack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="o0m-Nv-soo">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="bU4-8g-STX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -58,7 +184,7 @@
             <objects>
                 <viewController id="mfG-jP-iK6" customClass="AddProductViewController" customModule="inventoTrack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Bc8-hK-mQ5">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="rRE-9m-hyd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -73,7 +199,7 @@
             <objects>
                 <viewController id="czE-Ih-0Ns" customClass="BarcodeScannerViewController" customModule="inventoTrack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yZl-am-saA">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="fw3-c6-QzK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -88,7 +214,7 @@
             <objects>
                 <viewController id="Ol6-GV-iOv" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OsT-z4-yia">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="8X0-RX-NGf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -104,7 +230,7 @@
             <objects>
                 <viewController id="dpm-su-bIQ" customClass="SettingsViewController" customModule="inventoTrack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="19L-8w-a5v">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="c03-Hn-8Vg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -119,7 +245,7 @@
             <objects>
                 <viewController id="tLw-T6-Mjz" customClass="AccountSettingsViewController" customModule="inventoTrack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Mw5-ay-5D0">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="hlE-z5-KOO"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -134,7 +260,7 @@
             <objects>
                 <viewController id="ASh-MW-Zdq" customClass="ReportViewController" customModule="inventoTrack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9N6-IB-SYk">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="JbC-ID-5As"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -149,7 +275,7 @@
             <objects>
                 <viewController id="uZ3-wv-4Gy" customClass="BackupViewController" customModule="inventoTrack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lU2-Ft-NbK">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="zsh-Hs-pMq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -164,7 +290,7 @@
             <objects>
                 <viewController id="5WG-Ez-guZ" customClass="AboutSettingsViewController" customModule="inventoTrack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FIA-Ed-NOZ">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="xZD-jP-SRQ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -180,7 +306,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="axP-fK-4sq" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="2mh-e3-HWx">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -194,6 +320,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="appLogo" width="1024" height="1024"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
