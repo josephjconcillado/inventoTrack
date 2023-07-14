@@ -389,6 +389,9 @@
                                 <color key="tintColor" red="0.58586436509999995" green="0.5258619189" blue="0.48786020279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="barcode.viewfinder" catalog="system"/>
+                                <connections>
+                                    <action selector="barcodeScanner2Btn:" destination="ZHG-Tt-Z1c" eventType="touchUpInside" id="4Qj-Wb-Bbc"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MsL-da-eRo">
                                 <rect key="frame" x="203" y="522" width="10" height="21"/>
@@ -670,6 +673,9 @@
                                 <color key="tintColor" red="0.58586436509999995" green="0.5258619189" blue="0.48786020279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="barcode.viewfinder" catalog="system"/>
+                                <connections>
+                                    <action selector="scanBarcodeBtn:" destination="mfG-jP-iK6" eventType="touchUpInside" id="Oi6-ad-UdL"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="FL0-UE-Y0q"/>

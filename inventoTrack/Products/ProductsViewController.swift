@@ -61,8 +61,6 @@ class ProductsViewController: UIViewController, ProductDetailsViewControllerDele
                         } else {
                             tableView.deselectRow(at: key, animated: true)
                         }
-                        
-                        
                     }
                 }
                 
@@ -130,6 +128,10 @@ class ProductsViewController: UIViewController, ProductDetailsViewControllerDele
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
     }
+    override func viewWillDisappear(_ animated: Bool) {
+        viewOption[0].viewOption = !isToggled
+        CoreDataManager.shared.save()
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == productDetailsViewSegue {
@@ -146,7 +148,6 @@ class ProductsViewController: UIViewController, ProductDetailsViewControllerDele
                 vc.qtyTF.text = String(item.pQty)
                 vc.initTextField()
                 vc.selectedIndex = selectedIndex
-                //                vc.currentImage = vc.imageView
             }
         } else if segue.identifier == "addProductViewSegue" {
             if let vc = segue.destination as? AddProductViewController {
@@ -156,14 +157,6 @@ class ProductsViewController: UIViewController, ProductDetailsViewControllerDele
     }
     
     private func setupBarButtonItems() {
-        //        navigationItem.rightBarButtonItem = selectBarButton
-        
-        //            navigationItem.leftBarButtonItems = existingBarButton
-//        sortBarButton = PopoverButton()
-//        sortBarButton.action = #selector(didSortButtonClicked(_:))
-//        sortBarButton.image = UIImage(systemName: "arrow.up.arrow.down")
-        
-        
         navigationItem.rightBarButtonItems = [selectBarButton, sortBarButton]
         navigationItem.leftItemsSupplementBackButton = true
         navigationItem.leftBarButtonItem = displayToggleBarButton
@@ -183,15 +176,12 @@ class ProductsViewController: UIViewController, ProductDetailsViewControllerDele
             tableView.isHidden = true
             isToggled = !isToggled
             displayToggleBarButton.image = UIImage(systemName: "list.bullet")
-            viewOption[0].viewOption = true
         } else {
             collectionView.isHidden = true
             tableView.isHidden = false
             isToggled = !isToggled
             displayToggleBarButton.image = UIImage(systemName: "rectangle.grid.2x2")
-            viewOption[0].viewOption = false
         }
-        CoreDataManager.shared.save()
     }
     
     @objc func didSelectButtonClicked(_ sender: UIBarButtonItem) {
@@ -208,17 +198,6 @@ class ProductsViewController: UIViewController, ProductDetailsViewControllerDele
         CoreDataManager.shared.save()
         self.collectionView.reloadData()
         self.tableView.reloadData()
-        
-//        let anchorPoint = CGPoint(x: (sender.customView?.frame.minX), y: (sender.customView?.frame.midY))
-//        let popoverView = UIView(frame: CGRect(x: 20, y: (sender.customView?.bounds.maxY)! + 10, width: self.view.bounds.width - 40, height: 50))
-//        let popupLbl = UILabel(frame: CGRect(x: 0, y: 40, width: popoverView.bounds.width, height: 10))
-//
-//        popupLbl.text = "Whats up"
-//        popupLbl.textAlignment = .center
-//        popoverView.didAddSubview(popupLbl)
-//
-//        let popover = Popover()
-//        popover.show(popoverView, point: anchorPoint)
     }
     
     @objc func didToggleButtonClicked(_ sender: UIBarButtonItem) {
@@ -244,8 +223,6 @@ class ProductsViewController: UIViewController, ProductDetailsViewControllerDele
         }
         
         for i in deleteNeededIndexPaths.sorted(by: { $0.item > $1.item }) {
-            //            filteredProducts.remove(at: i.item)
-            //            let item = filteredProducts[i.item]
             CoreDataManager.shared.deleteProduct(filteredProducts[i.item])
             filteredProducts.remove(at: i.item)
         }
@@ -258,11 +235,6 @@ class ProductsViewController: UIViewController, ProductDetailsViewControllerDele
     }
     @IBAction func addProductButton(_ sender: Any) {
         performSegue(withIdentifier: "addProductViewSegue", sender: nil)
-    }
-    
-    
-    @IBAction func activateSelection(_ sender: Any) {
-        
     }
     
     func reloadData() {
@@ -281,14 +253,12 @@ class ProductsViewController: UIViewController, ProductDetailsViewControllerDele
             viewOption = CoreDataManager.shared.fetchViewOption()
             sortOptionsData = CoreDataManager.shared.fetchSortOption()
             sortOptionData = sortOptionsData[0]
-            isToggled = viewOption[0].viewOption
-            
         } else {
             viewOption = CoreDataManager.shared.fetchViewOption()
             sortOptionData = sortOptionsData[0]
-            isToggled = viewOption[0].viewOption
         }
         allProducts = CoreDataManager.shared.fetchProducts(sortOption: sortOptions[Int(sortOptionData.sortOption)].sortValue)
+        isToggled = viewOption[0].viewOption
     }
     
     func checkItems() {
@@ -388,7 +358,6 @@ extension ProductsViewController: UICollectionViewDelegate, UICollectionViewData
             selectedIndexPath[indexPath] = false
         }
     }
-    
 }
 
 extension ProductsViewController: UICollectionViewDelegateFlowLayout {
@@ -419,8 +388,6 @@ extension ProductsViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let cell = tableView.cellForRow(at: indexPath)
-//        cell?.isHighlighted = true
         switch mMode {
         case .view:
             
@@ -431,21 +398,19 @@ extension ProductsViewController: UITableViewDataSource {
             performSegue(withIdentifier: productDetailsViewSegue, sender: row)
             
         case .select:
-
+            
             selectedIndexPath[indexPath] = true
         }
     }
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-//        let cell = tableView.cellForRow(at: indexPath)
-//        cell?.isHighlighted = false
+
         if mMode == .select {
             selectedIndexPath[indexPath] = false
         }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        // Return the desired height for the cell at the specified indexPath
         return 130.0 // Adjust the height as per your requirements
     }
 }
