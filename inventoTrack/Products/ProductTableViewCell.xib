@@ -56,7 +56,7 @@
                         <color key="backgroundColor" red="0.58586436509999995" green="0.5258619189" blue="0.48786020279999998" alpha="0.19867549670000001" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="AVA-l0-bUo">
-                        <rect key="frame" x="560.66666666666663" y="108.66666666666666" width="53" height="33.666666666666657"/>
+                        <rect key="frame" x="568.33333333333337" y="113.66666666666667" width="45.333333333333371" height="28.666666666666643"/>
                         <color key="tintColor" red="0.58586436509999995" green="0.5258619189" blue="0.48786020279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </imageView>
                 </subviews>
@@ -82,11 +82,11 @@
             <viewLayoutGuide key="safeArea" id="f3S-RR-TSV"/>
             <constraints>
                 <constraint firstItem="spQ-5t-SbH" firstAttribute="width" secondItem="Sf1-Ij-3Rp" secondAttribute="width" multiplier="0.3" id="0OI-F9-9XH"/>
-                <constraint firstItem="AVA-l0-bUo" firstAttribute="height" secondItem="Sf1-Ij-3Rp" secondAttribute="height" multiplier="0.233333" id="BJJ-ow-8bc"/>
+                <constraint firstItem="AVA-l0-bUo" firstAttribute="height" secondItem="Sf1-Ij-3Rp" secondAttribute="height" multiplier="0.2" id="BJJ-ow-8bc"/>
                 <constraint firstItem="RIu-Pd-RrG" firstAttribute="centerY" secondItem="f3S-RR-TSV" secondAttribute="centerY" id="GX9-GZ-IVF"/>
                 <constraint firstItem="RIu-Pd-RrG" firstAttribute="height" secondItem="Sf1-Ij-3Rp" secondAttribute="height" id="HEX-Mr-XH2"/>
                 <constraint firstItem="bfE-ht-CsA" firstAttribute="top" secondItem="f3S-RR-TSV" secondAttribute="centerY" multiplier="1.65" id="OOW-Oi-K0Z"/>
-                <constraint firstItem="AVA-l0-bUo" firstAttribute="width" secondItem="Sf1-Ij-3Rp" secondAttribute="width" multiplier="0.0820433" id="QVP-qT-S0q"/>
+                <constraint firstItem="AVA-l0-bUo" firstAttribute="width" secondItem="Sf1-Ij-3Rp" secondAttribute="width" multiplier="0.07" id="QVP-qT-S0q"/>
                 <constraint firstItem="RIu-Pd-RrG" firstAttribute="centerX" secondItem="f3S-RR-TSV" secondAttribute="centerX" id="Qa6-gr-n8N"/>
                 <constraint firstItem="spQ-5t-SbH" firstAttribute="top" secondItem="f3S-RR-TSV" secondAttribute="centerY" multiplier="1.4" id="YUe-JO-lXG"/>
                 <constraint firstItem="RIu-Pd-RrG" firstAttribute="width" secondItem="Sf1-Ij-3Rp" secondAttribute="width" id="Ybs-is-vfr"/>

@@ -61,7 +61,7 @@
                         <color key="backgroundColor" red="0.58586436509999995" green="0.5258619189" blue="0.48786020279999998" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="q3a-Xz-leb">
-                        <rect key="frame" x="193.66666666666666" y="143.66666666666666" width="50" height="58.666666666666657"/>
+                        <rect key="frame" x="193.66666666666666" y="233.66666666666666" width="50" height="58.666666666666714"/>
                         <color key="tintColor" red="0.58586436509999995" green="0.5258619189" blue="0.48786020279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </imageView>
                 </subviews>
@@ -81,7 +81,7 @@
                 <constraint firstItem="RBh-CO-kSS" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="dzU-U1-LPI"/>
                 <constraint firstItem="q3a-Xz-leb" firstAttribute="trailing" secondItem="gTV-IL-0wX" secondAttribute="centerX" multiplier="1.95" id="eHD-AA-nzB"/>
                 <constraint firstItem="hMZ-8Q-Wyv" firstAttribute="trailing" secondItem="gTV-IL-0wX" secondAttribute="centerX" multiplier="1.95" id="nrC-Xv-VP7"/>
-                <constraint firstItem="q3a-Xz-leb" firstAttribute="bottom" secondItem="gTV-IL-0wX" secondAttribute="centerY" multiplier="1.35" id="pm4-RB-xLw"/>
+                <constraint firstItem="q3a-Xz-leb" firstAttribute="bottom" secondItem="gTV-IL-0wX" secondAttribute="centerY" multiplier="1.95" id="pm4-RB-xLw"/>
                 <constraint firstItem="q3a-Xz-leb" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" multiplier="0.2" id="tbn-i6-dAe"/>
                 <constraint firstItem="hMZ-8Q-Wyv" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="0.15" id="tzb-IK-1tg"/>
                 <constraint firstItem="c9A-M2-AS4" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" multiplier="1.7" id="wL0-fI-Q3c"/>
