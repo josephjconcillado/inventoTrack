@@ -23,6 +23,7 @@
 		0561F58F2A607D2C00B70A20 /* AboutSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0561F58E2A607D2C00B70A20 /* AboutSettingsViewController.swift */; };
 		0561F5932A607D7600B70A20 /* BarcodeScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0561F5922A607D7600B70A20 /* BarcodeScannerViewController.swift */; };
 		0561F5952A60C53A00B70A20 /* OnboardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0561F5942A60C53A00B70A20 /* OnboardCollectionViewCell.swift */; };
+		0561F5982A60DD8500B70A20 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0561F5972A60DD8500B70A20 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		0561F58E2A607D2C00B70A20 /* AboutSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutSettingsViewController.swift; sourceTree = "<group>"; };
 		0561F5922A607D7600B70A20 /* BarcodeScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeScannerViewController.swift; sourceTree = "<group>"; };
 		0561F5942A60C53A00B70A20 /* OnboardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardCollectionViewCell.swift; sourceTree = "<group>"; };
+		0561F5972A60DD8500B70A20 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 		0561F5612A6076EE00B70A20 /* inventoTrack */ = {
 			isa = PBXGroup;
 			children = (
+				0561F5962A60DD5E00B70A20 /* Home */,
 				0561F57D2A60791300B70A20 /* Extra */,
 				0561F57C2A6078FB00B70A20 /* Onboard */,
 				0561F57B2A6078DE00B70A20 /* Backup */,
@@ -169,6 +172,14 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
+		0561F5962A60DD5E00B70A20 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				0561F5972A60DD8500B70A20 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -245,6 +256,7 @@
 				0561F5932A607D7600B70A20 /* BarcodeScannerViewController.swift in Sources */,
 				0561F5872A607A0000B70A20 /* OnboardViewController.swift in Sources */,
 				0561F5632A6076EE00B70A20 /* AppDelegate.swift in Sources */,
+				0561F5982A60DD8500B70A20 /* HomeViewController.swift in Sources */,
 				0561F57F2A6079AA00B70A20 /* ProductsViewController.swift in Sources */,
 				0561F5812A6079C500B70A20 /* ReportViewController.swift in Sources */,
 				0561F5652A6076EE00B70A20 /* SceneDelegate.swift in Sources */,

@@ -104,7 +104,7 @@
                                 </cells>
                             </collectionView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" translatesAutoresizingMaskIntoConstraints="NO" id="fAJ-oq-HtR">
-                                <rect key="frame" x="64.666666666666686" y="757.33333333333337" width="301.00000000000006" height="36.333333333333371"/>
+                                <rect key="frame" x="64.666666666666686" y="757.33333333333337" width="301" height="36.333333333333371"/>
                                 <color key="pageIndicatorTintColor" red="0.58586436509999995" green="0.5258619189" blue="0.48786020279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="currentPageIndicatorTintColor" red="0.76676553489999999" green="0.47950476409999998" blue="0.26994159820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </pageControl>
@@ -159,6 +159,7 @@
                         <viewLayoutGuide key="safeArea" id="4uF-gr-hK1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" style="editor" id="DVQ-O5-IAj"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pI7-wB-5dW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -209,17 +210,81 @@
             </objects>
             <point key="canvasLocation" x="239" y="1773"/>
         </scene>
-        <!--View Controller-->
+        <!--inventoTrack-->
         <scene sceneID="Hmp-8C-kg3">
             <objects>
-                <viewController id="Ol6-GV-iOv" sceneMemberID="viewController">
+                <viewController id="Ol6-GV-iOv" customClass="HomeViewController" customModule="inventoTrack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OsT-z4-yia">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wuL-Hk-nLC">
+                                <rect key="frame" x="129" y="145" width="172" height="149"/>
+                                <color key="tintColor" red="0.58586436509999995" green="0.5258619189" blue="0.48786020279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="productsIcon" imagePlacement="top" title="Products" imagePadding="5" titleAlignment="center">
+                                    <fontDescription key="titleFontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="w3G-uE-wET" kind="show" id="MhW-G1-MBc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="41o-oN-eY3">
+                                <rect key="frame" x="129" y="291.33333333333331" width="172" height="149.33333333333331"/>
+                                <color key="tintColor" red="0.58586436509999995" green="0.5258619189" blue="0.48786020279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="chartIcon2" imagePlacement="top" title="Report" imagePadding="5" titleAlignment="center">
+                                    <fontDescription key="titleFontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="ASh-MW-Zdq" kind="show" id="lwr-NK-KNK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ECk-sv-ubx">
+                                <rect key="frame" x="129" y="438" width="172" height="149"/>
+                                <color key="tintColor" red="0.58586436509999995" green="0.5258619189" blue="0.48786020279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="backupIcon" imagePlacement="top" title="Backup" imagePadding="5" titleAlignment="center">
+                                    <fontDescription key="titleFontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="uZ3-wv-4Gy" kind="show" id="M2t-iO-6w1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ncw-y7-Nce">
+                                <rect key="frame" x="129" y="584.33333333333337" width="172" height="149"/>
+                                <color key="tintColor" red="0.58586436509999995" green="0.5258619189" blue="0.48786020279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="settingsIcon" imagePlacement="top" title="Settings" imagePadding="5" titleAlignment="center">
+                                    <fontDescription key="titleFontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="dpm-su-bIQ" kind="show" id="zlc-Zv-js0"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="8X0-RX-NGf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ncw-y7-Nce" firstAttribute="height" secondItem="OsT-z4-yia" secondAttribute="height" multiplier="0.16" id="2Na-dk-mf0"/>
+                            <constraint firstItem="ECk-sv-ubx" firstAttribute="width" secondItem="OsT-z4-yia" secondAttribute="width" multiplier="0.4" id="4Vh-RG-IJ2"/>
+                            <constraint firstItem="41o-oN-eY3" firstAttribute="height" secondItem="OsT-z4-yia" secondAttribute="height" multiplier="0.16" id="8xD-kZ-u2H"/>
+                            <constraint firstItem="wuL-Hk-nLC" firstAttribute="width" secondItem="OsT-z4-yia" secondAttribute="width" multiplier="0.4" id="KLn-iG-u4L"/>
+                            <constraint firstItem="ncw-y7-Nce" firstAttribute="centerX" secondItem="8X0-RX-NGf" secondAttribute="centerX" id="TRA-Tn-IIJ"/>
+                            <constraint firstItem="ncw-y7-Nce" firstAttribute="width" secondItem="OsT-z4-yia" secondAttribute="width" multiplier="0.4" id="VF9-Q3-SY4"/>
+                            <constraint firstItem="41o-oN-eY3" firstAttribute="width" secondItem="OsT-z4-yia" secondAttribute="width" multiplier="0.4" id="b2o-X9-eto"/>
+                            <constraint firstItem="ncw-y7-Nce" firstAttribute="centerY" secondItem="8X0-RX-NGf" secondAttribute="centerY" multiplier="1.35" id="gyU-rh-ndR"/>
+                            <constraint firstItem="ECk-sv-ubx" firstAttribute="height" secondItem="OsT-z4-yia" secondAttribute="height" multiplier="0.16" id="hpV-Y5-HLB"/>
+                            <constraint firstItem="ECk-sv-ubx" firstAttribute="centerX" secondItem="8X0-RX-NGf" secondAttribute="centerX" id="imk-dq-1iz"/>
+                            <constraint firstItem="ECk-sv-ubx" firstAttribute="centerY" secondItem="8X0-RX-NGf" secondAttribute="centerY" multiplier="1.05" id="jsW-yp-zbr"/>
+                            <constraint firstItem="41o-oN-eY3" firstAttribute="centerX" secondItem="8X0-RX-NGf" secondAttribute="centerX" id="lbM-Pu-14x"/>
+                            <constraint firstItem="wuL-Hk-nLC" firstAttribute="height" secondItem="OsT-z4-yia" secondAttribute="height" multiplier="0.16" id="luG-UP-RPT"/>
+                            <constraint firstItem="wuL-Hk-nLC" firstAttribute="centerX" secondItem="8X0-RX-NGf" secondAttribute="centerX" id="nK6-KU-Ddh"/>
+                            <constraint firstItem="wuL-Hk-nLC" firstAttribute="centerY" secondItem="8X0-RX-NGf" secondAttribute="centerY" multiplier="0.45" id="sWo-d4-ll8"/>
+                            <constraint firstItem="41o-oN-eY3" firstAttribute="centerY" secondItem="8X0-RX-NGf" secondAttribute="centerY" multiplier="0.75" id="vuU-3b-zOH"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Z3c-hh-5KV"/>
+                    <navigationItem key="navigationItem" title="inventoTrack" id="Z3c-hh-5KV"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KrO-VK-UWd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -235,6 +300,7 @@
                         <viewLayoutGuide key="safeArea" id="c03-Hn-8Vg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" style="editor" id="b0V-8H-7O9"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pDB-bj-qQx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -265,10 +331,11 @@
                         <viewLayoutGuide key="safeArea" id="JbC-ID-5As"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" style="editor" id="04h-Uc-eRi"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XMo-qK-QvQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1273" y="251"/>
+            <point key="canvasLocation" x="1229" y="250"/>
         </scene>
         <!--Backup View Controller-->
         <scene sceneID="63V-IB-2Jn">
@@ -280,6 +347,7 @@
                         <viewLayoutGuide key="safeArea" id="zsh-Hs-pMq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" style="editor" id="RQ7-QU-Mj2"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cJb-di-PVu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -308,6 +376,11 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="2mh-e3-HWx">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.58586436509999995" green="0.5258619189" blue="0.48786020279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                            <color key="textColor" red="0.58586436509999995" green="0.5258619189" blue="0.48786020279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -321,6 +394,10 @@
     </scenes>
     <resources>
         <image name="appLogo" width="1024" height="1024"/>
+        <image name="backupIcon" width="64" height="64"/>
+        <image name="chartIcon2" width="64" height="64"/>
+        <image name="productsIcon" width="64" height="64"/>
+        <image name="settingsIcon" width="64" height="64"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
