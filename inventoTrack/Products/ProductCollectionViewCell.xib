@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="ProductCollectionViewCell" id="gTV-IL-0wX" customClass="ProductCollectionViewCell" customModule="inventoTrack" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="250" height="300"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="250" height="300"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RBh-CO-kSS">
+                        <rect key="frame" x="0.0" y="0.0" width="250" height="210"/>
+                        <color key="tintColor" red="0.58586436509999995" green="0.5258619189" blue="0.48786020279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The quick brown fox jumps over the lazy dog" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c9A-M2-AS4">
+                        <rect key="frame" x="6.3333333333333286" y="202.66666666666666" width="237.33333333333337" height="104.99999999999997"/>
+                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
+                        <color key="textColor" red="0.58586436509999995" green="0.5258619189" blue="0.48786020279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="123" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hMZ-8Q-Wyv" customClass="PaddingBorder" customModule="inventoTrack" customModuleProvider="target">
+                        <rect key="frame" x="224.66666666666666" y="7.6666666666666679" width="19" height="45"/>
+                        <color key="backgroundColor" red="0.76676553489999999" green="0.47950476409999998" blue="0.26994159820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <color key="textColor" systemColor="systemGray6Color"/>
+                        <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="topPadding">
+                                <real key="value" value="15"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="bottomPadding">
+                                <real key="value" value="15"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="rightPadding">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="0.5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" systemColor="systemGray6Color"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="7"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </label>
+                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="amM-yR-Ipi">
+                        <rect key="frame" x="0.0" y="0.0" width="250" height="300"/>
+                        <color key="backgroundColor" red="0.58586436509999995" green="0.5258619189" blue="0.48786020279999998" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="q3a-Xz-leb">
+                        <rect key="frame" x="193.66666666666666" y="143.66666666666666" width="50" height="58.666666666666657"/>
+                        <color key="tintColor" red="0.58586436509999995" green="0.5258619189" blue="0.48786020279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </imageView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="c9A-M2-AS4" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="5bv-c0-qEa"/>
+                <constraint firstItem="c9A-M2-AS4" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="0.35" id="C5S-Tn-r3Q"/>
+                <constraint firstItem="c9A-M2-AS4" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" multiplier="0.95" id="EUZ-zy-5gn"/>
+                <constraint firstItem="RBh-CO-kSS" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="Ere-6G-67t"/>
+                <constraint firstItem="amM-yR-Ipi" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="FZ2-kk-Sf7"/>
+                <constraint firstItem="RBh-CO-kSS" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" id="Rnn-VF-kPl"/>
+                <constraint firstItem="amM-yR-Ipi" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="UhZ-Gz-fdX"/>
+                <constraint firstItem="q3a-Xz-leb" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="0.2" id="WhO-xa-5Dk"/>
+                <constraint firstItem="hMZ-8Q-Wyv" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="centerY" multiplier="0.05" id="Wql-F1-CFB"/>
+                <constraint firstItem="amM-yR-Ipi" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" id="XlM-2b-Ike"/>
+                <constraint firstItem="amM-yR-Ipi" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" id="cDq-QG-Hmt"/>
+                <constraint firstItem="RBh-CO-kSS" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="dzU-U1-LPI"/>
+                <constraint firstItem="q3a-Xz-leb" firstAttribute="trailing" secondItem="gTV-IL-0wX" secondAttribute="centerX" multiplier="1.95" id="eHD-AA-nzB"/>
+                <constraint firstItem="hMZ-8Q-Wyv" firstAttribute="trailing" secondItem="gTV-IL-0wX" secondAttribute="centerX" multiplier="1.95" id="nrC-Xv-VP7"/>
+                <constraint firstItem="q3a-Xz-leb" firstAttribute="bottom" secondItem="gTV-IL-0wX" secondAttribute="centerY" multiplier="1.35" id="pm4-RB-xLw"/>
+                <constraint firstItem="q3a-Xz-leb" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" multiplier="0.2" id="tbn-i6-dAe"/>
+                <constraint firstItem="hMZ-8Q-Wyv" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="0.15" id="tzb-IK-1tg"/>
+                <constraint firstItem="c9A-M2-AS4" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" multiplier="1.7" id="wL0-fI-Q3c"/>
+                <constraint firstItem="RBh-CO-kSS" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="0.7" id="yGj-dn-PNU"/>
+            </constraints>
+            <connections>
+                <outlet property="highlightIndicator" destination="amM-yR-Ipi" id="5v6-QU-pIK"/>
+                <outlet property="imageView" destination="RBh-CO-kSS" id="dcE-uc-bYH"/>
+                <outlet property="pLabel" destination="c9A-M2-AS4" id="E8A-JX-Ies"/>
+                <outlet property="pQty" destination="hMZ-8Q-Wyv" id="YzN-3m-RDL"/>
+                <outlet property="selectIndicator" destination="q3a-Xz-leb" id="j48-zo-0qa"/>
+            </connections>
+            <point key="canvasLocation" x="139" y="20"/>
+        </collectionViewCell>
+    </objects>
+    <designables>
+        <designable name="hMZ-8Q-Wyv">
+            <size key="intrinsicContentSize" width="19" height="13.333333333333334"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="checkmark.circle.fill" catalog="system" width="128" height="123"/>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

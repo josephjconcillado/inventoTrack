@@ -24,6 +24,19 @@
 		0561F5932A607D7600B70A20 /* BarcodeScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0561F5922A607D7600B70A20 /* BarcodeScannerViewController.swift */; };
 		0561F5952A60C53A00B70A20 /* OnboardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0561F5942A60C53A00B70A20 /* OnboardCollectionViewCell.swift */; };
 		0561F5982A60DD8500B70A20 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0561F5972A60DD8500B70A20 /* HomeViewController.swift */; };
+		0561F59B2A60E58D00B70A20 /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0561F5992A60E58D00B70A20 /* ProductCollectionViewCell.swift */; };
+		0561F59C2A60E58D00B70A20 /* ProductCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0561F59A2A60E58D00B70A20 /* ProductCollectionViewCell.xib */; };
+		0561F59E2A60ECFC00B70A20 /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0561F59D2A60ECFC00B70A20 /* PaddingLabel.swift */; };
+		0561F5A12A6102CA00B70A20 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0561F59F2A6102CA00B70A20 /* ProductTableViewCell.swift */; };
+		0561F5A22A6102CA00B70A20 /* ProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0561F5A02A6102CA00B70A20 /* ProductTableViewCell.xib */; };
+		0561F5A62A610B6F00B70A20 /* MyProducts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0561F5A42A610B6F00B70A20 /* MyProducts.xcdatamodeld */; };
+		0561F5AD2A610D0B00B70A20 /* Product+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0561F5A72A610D0B00B70A20 /* Product+CoreDataClass.swift */; };
+		0561F5AE2A610D0B00B70A20 /* Product+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0561F5A82A610D0B00B70A20 /* Product+CoreDataProperties.swift */; };
+		0561F5B12A610D0B00B70A20 /* Sort+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0561F5AB2A610D0B00B70A20 /* Sort+CoreDataClass.swift */; };
+		0561F5B22A610D0B00B70A20 /* Sort+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0561F5AC2A610D0B00B70A20 /* Sort+CoreDataProperties.swift */; };
+		0561F5B42A610D6F00B70A20 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0561F5B32A610D6F00B70A20 /* CoreDataManager.swift */; };
+		0561F5B72A61C74900B70A20 /* DisplayView+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0561F5B52A61C74900B70A20 /* DisplayView+CoreDataClass.swift */; };
+		0561F5B82A61C74900B70A20 /* DisplayView+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0561F5B62A61C74900B70A20 /* DisplayView+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +59,19 @@
 		0561F5922A607D7600B70A20 /* BarcodeScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeScannerViewController.swift; sourceTree = "<group>"; };
 		0561F5942A60C53A00B70A20 /* OnboardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardCollectionViewCell.swift; sourceTree = "<group>"; };
 		0561F5972A60DD8500B70A20 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		0561F5992A60E58D00B70A20 /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
+		0561F59A2A60E58D00B70A20 /* ProductCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCollectionViewCell.xib; sourceTree = "<group>"; };
+		0561F59D2A60ECFC00B70A20 /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
+		0561F59F2A6102CA00B70A20 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
+		0561F5A02A6102CA00B70A20 /* ProductTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductTableViewCell.xib; sourceTree = "<group>"; };
+		0561F5A52A610B6F00B70A20 /* MyProducts.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyProducts.xcdatamodel; sourceTree = "<group>"; };
+		0561F5A72A610D0B00B70A20 /* Product+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Product+CoreDataClass.swift"; sourceTree = "<group>"; };
+		0561F5A82A610D0B00B70A20 /* Product+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Product+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		0561F5AB2A610D0B00B70A20 /* Sort+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sort+CoreDataClass.swift"; sourceTree = "<group>"; };
+		0561F5AC2A610D0B00B70A20 /* Sort+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sort+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		0561F5B32A610D6F00B70A20 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		0561F5B52A61C74900B70A20 /* DisplayView+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DisplayView+CoreDataClass.swift"; sourceTree = "<group>"; };
+		0561F5B62A61C74900B70A20 /* DisplayView+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DisplayView+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +137,10 @@
 				0561F57E2A6079AA00B70A20 /* ProductsViewController.swift */,
 				0561F5882A607CD600B70A20 /* ProductDetailsViewController.swift */,
 				0561F58A2A607CE700B70A20 /* AddProductViewController.swift */,
+				0561F5992A60E58D00B70A20 /* ProductCollectionViewCell.swift */,
+				0561F59A2A60E58D00B70A20 /* ProductCollectionViewCell.xib */,
+				0561F59F2A6102CA00B70A20 /* ProductTableViewCell.swift */,
+				0561F5A02A6102CA00B70A20 /* ProductTableViewCell.xib */,
 			);
 			path = Products;
 			sourceTree = "<group>";
@@ -153,6 +183,7 @@
 		0561F57D2A60791300B70A20 /* Extra */ = {
 			isa = PBXGroup;
 			children = (
+				0561F59D2A60ECFC00B70A20 /* PaddingLabel.swift */,
 			);
 			path = Extra;
 			sourceTree = "<group>";
@@ -168,6 +199,14 @@
 		0561F5912A607D5400B70A20 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				0561F5A72A610D0B00B70A20 /* Product+CoreDataClass.swift */,
+				0561F5A82A610D0B00B70A20 /* Product+CoreDataProperties.swift */,
+				0561F5B52A61C74900B70A20 /* DisplayView+CoreDataClass.swift */,
+				0561F5B62A61C74900B70A20 /* DisplayView+CoreDataProperties.swift */,
+				0561F5AB2A610D0B00B70A20 /* Sort+CoreDataClass.swift */,
+				0561F5AC2A610D0B00B70A20 /* Sort+CoreDataProperties.swift */,
+				0561F5A42A610B6F00B70A20 /* MyProducts.xcdatamodeld */,
+				0561F5B32A610D6F00B70A20 /* CoreDataManager.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -240,6 +279,8 @@
 			files = (
 				0561F56F2A6076F000B70A20 /* LaunchScreen.storyboard in Resources */,
 				0561F56C2A6076F000B70A20 /* Assets.xcassets in Resources */,
+				0561F5A22A6102CA00B70A20 /* ProductTableViewCell.xib in Resources */,
+				0561F59C2A60E58D00B70A20 /* ProductCollectionViewCell.xib in Resources */,
 				0561F56A2A6076EE00B70A20 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -253,13 +294,24 @@
 			files = (
 				0561F5852A6079E900B70A20 /* BackupViewController.swift in Sources */,
 				0561F58F2A607D2C00B70A20 /* AboutSettingsViewController.swift in Sources */,
+				0561F5B12A610D0B00B70A20 /* Sort+CoreDataClass.swift in Sources */,
+				0561F5B22A610D0B00B70A20 /* Sort+CoreDataProperties.swift in Sources */,
 				0561F5932A607D7600B70A20 /* BarcodeScannerViewController.swift in Sources */,
 				0561F5872A607A0000B70A20 /* OnboardViewController.swift in Sources */,
+				0561F59E2A60ECFC00B70A20 /* PaddingLabel.swift in Sources */,
+				0561F5A12A6102CA00B70A20 /* ProductTableViewCell.swift in Sources */,
 				0561F5632A6076EE00B70A20 /* AppDelegate.swift in Sources */,
 				0561F5982A60DD8500B70A20 /* HomeViewController.swift in Sources */,
 				0561F57F2A6079AA00B70A20 /* ProductsViewController.swift in Sources */,
+				0561F59B2A60E58D00B70A20 /* ProductCollectionViewCell.swift in Sources */,
+				0561F5AE2A610D0B00B70A20 /* Product+CoreDataProperties.swift in Sources */,
 				0561F5812A6079C500B70A20 /* ReportViewController.swift in Sources */,
+				0561F5B82A61C74900B70A20 /* DisplayView+CoreDataProperties.swift in Sources */,
+				0561F5AD2A610D0B00B70A20 /* Product+CoreDataClass.swift in Sources */,
+				0561F5B72A61C74900B70A20 /* DisplayView+CoreDataClass.swift in Sources */,
+				0561F5A62A610B6F00B70A20 /* MyProducts.xcdatamodeld in Sources */,
 				0561F5652A6076EE00B70A20 /* SceneDelegate.swift in Sources */,
+				0561F5B42A610D6F00B70A20 /* CoreDataManager.swift in Sources */,
 				0561F5832A6079D600B70A20 /* SettingsViewController.swift in Sources */,
 				0561F58D2A607D1400B70A20 /* AccountSettingsViewController.swift in Sources */,
 				0561F5892A607CD600B70A20 /* ProductDetailsViewController.swift in Sources */,
@@ -482,6 +534,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		0561F5A42A610B6F00B70A20 /* MyProducts.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0561F5A52A610B6F00B70A20 /* MyProducts.xcdatamodel */,
+			);
+			currentVersion = 0561F5A52A610B6F00B70A20 /* MyProducts.xcdatamodel */;
+			path = MyProducts.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 0561F5572A6076EE00B70A20 /* Project object */;
 }
