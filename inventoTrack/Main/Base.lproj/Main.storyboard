@@ -394,8 +394,8 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MsL-da-eRo">
-                                <rect key="frame" x="203" y="522" width="10" height="21"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                <rect key="frame" x="201.66666666666666" y="522" width="10" height="21"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="13"/>
                                 <color key="textColor" systemColor="systemGray2Color"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -451,7 +451,7 @@
                             <constraint firstItem="7bb-AN-tlG" firstAttribute="top" secondItem="utq-zp-aoK" secondAttribute="bottom" constant="20" id="n6R-p8-kd8"/>
                             <constraint firstItem="utq-zp-aoK" firstAttribute="top" secondItem="XRR-0Q-mIk" secondAttribute="bottom" constant="20" id="ojs-3Z-ogL"/>
                             <constraint firstItem="GGD-9A-lmF" firstAttribute="top" secondItem="Pep-dP-Qzi" secondAttribute="top" constant="20" id="rIt-33-xZ5"/>
-                            <constraint firstItem="MsL-da-eRo" firstAttribute="centerX" secondItem="hQQ-xJ-lvw" secondAttribute="centerX" multiplier="0.73" id="rxW-c8-umJ"/>
+                            <constraint firstItem="MsL-da-eRo" firstAttribute="centerX" secondItem="hQQ-xJ-lvw" secondAttribute="centerX" multiplier="0.725" id="rxW-c8-umJ"/>
                             <constraint firstItem="qgx-S5-nj2" firstAttribute="leading" secondItem="cnb-vn-MvU" secondAttribute="leading" constant="-15" id="s4u-Rc-EjQ"/>
                             <constraint firstItem="EaX-3O-RHJ" firstAttribute="top" secondItem="XRR-0Q-mIk" secondAttribute="top" id="s7v-Qx-ieA"/>
                             <constraint firstItem="GGD-9A-lmF" firstAttribute="height" secondItem="mEP-Zr-QeS" secondAttribute="height" multiplier="0.35" id="sN3-96-fi7"/>
@@ -640,8 +640,8 @@
                                 </connections>
                             </textField>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tir-Ih-vxe">
-                                <rect key="frame" x="203" y="528.66666666666663" width="10" height="21"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                <rect key="frame" x="201.66666666666666" y="528.66666666666663" width="10" height="21"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="13"/>
                                 <color key="textColor" systemColor="systemGray2Color"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -712,7 +712,7 @@
                             <constraint firstItem="ilb-L0-5pD" firstAttribute="height" secondItem="joX-ln-hu8" secondAttribute="height" multiplier="0.32" id="YYx-gm-bk6"/>
                             <constraint firstItem="e3M-Zg-R8W" firstAttribute="leading" secondItem="FL0-UE-Y0q" secondAttribute="leading" constant="20" id="ZGl-mi-3h0"/>
                             <constraint firstItem="xsr-zF-fZU" firstAttribute="centerY" secondItem="e3M-Zg-R8W" secondAttribute="centerY" id="Zll-7o-N2Z"/>
-                            <constraint firstItem="tir-Ih-vxe" firstAttribute="centerX" secondItem="WsV-ER-tYE" secondAttribute="centerX" multiplier="0.73" id="bXR-1m-bG8"/>
+                            <constraint firstItem="tir-Ih-vxe" firstAttribute="centerX" secondItem="WsV-ER-tYE" secondAttribute="centerX" multiplier="0.725" id="bXR-1m-bG8"/>
                             <constraint firstItem="e3M-Zg-R8W" firstAttribute="trailing" secondItem="VOr-Vt-TE8" secondAttribute="trailing" id="cFn-6Y-OR1"/>
                             <constraint firstItem="ERF-kT-22l" firstAttribute="leading" secondItem="FL0-UE-Y0q" secondAttribute="leading" constant="20" id="ezr-wO-8dZ"/>
                             <constraint firstItem="FL0-UE-Y0q" firstAttribute="trailing" secondItem="73Y-bV-Beu" secondAttribute="trailing" constant="25" id="fF1-Am-qmt"/>
