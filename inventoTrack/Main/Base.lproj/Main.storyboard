@@ -910,23 +910,55 @@
             </objects>
             <point key="canvasLocation" x="3271" y="-585"/>
         </scene>
-        <!--Report View Controller-->
+        <!--Report-->
         <scene sceneID="YNV-qb-esZ">
             <objects>
                 <viewController id="ASh-MW-Zdq" customClass="ReportViewController" customModule="inventoTrack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9N6-IB-SYk">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a3f-eb-HXE" customClass="PieChartView" customModule="DGCharts">
+                                <rect key="frame" x="21.666666666666657" y="97.666666666666686" width="387" height="577"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ATN-6p-DGN">
+                                <rect key="frame" x="25" y="865.66666666666663" width="380" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="i3o-Kj-Z1f"/>
+                                </constraints>
+                                <color key="tintColor" red="0.58586436509999995" green="0.5258619189" blue="0.48786020279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Save Report" cornerStyle="capsule">
+                                    <fontDescription key="titleFontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="18"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="saveReport:" destination="ASh-MW-Zdq" eventType="touchUpInside" id="uav-u0-GIm"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="JbC-ID-5As"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ATN-6p-DGN" firstAttribute="centerX" secondItem="JbC-ID-5As" secondAttribute="centerX" id="ZGh-2G-HSa"/>
+                            <constraint firstItem="a3f-eb-HXE" firstAttribute="width" secondItem="JbC-ID-5As" secondAttribute="width" multiplier="0.9" id="eXB-SZ-9OV"/>
+                            <constraint firstItem="a3f-eb-HXE" firstAttribute="centerX" secondItem="JbC-ID-5As" secondAttribute="centerX" id="jFs-4Q-Kib"/>
+                            <constraint firstItem="ATN-6p-DGN" firstAttribute="width" secondItem="9N6-IB-SYk" secondAttribute="width" multiplier="0.883721" id="jHi-sT-sUT"/>
+                            <constraint firstItem="JbC-ID-5As" firstAttribute="bottom" secondItem="ATN-6p-DGN" secondAttribute="bottom" multiplier="1.02" id="pW9-co-v8H"/>
+                            <constraint firstItem="a3f-eb-HXE" firstAttribute="top" secondItem="JbC-ID-5As" secondAttribute="centerY" multiplier="0.2" id="pbm-U1-cZb"/>
+                            <constraint firstItem="a3f-eb-HXE" firstAttribute="height" secondItem="JbC-ID-5As" secondAttribute="height" multiplier="0.65" id="rgo-TI-vrw"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" style="editor" id="04h-Uc-eRi"/>
+                    <navigationItem key="navigationItem" title="Report" style="editor" id="04h-Uc-eRi"/>
+                    <connections>
+                        <outlet property="chartView" destination="a3f-eb-HXE" id="yxb-5h-90h"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XMo-qK-QvQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1229" y="250"/>
         </scene>
-        <!--Backup View Controller-->
+        <!--Backup-->
         <scene sceneID="63V-IB-2Jn">
             <objects>
                 <viewController id="uZ3-wv-4Gy" customClass="BackupViewController" customModule="inventoTrack" customModuleProvider="target" sceneMemberID="viewController">
@@ -936,7 +968,7 @@
                         <viewLayoutGuide key="safeArea" id="zsh-Hs-pMq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" style="editor" id="RQ7-QU-Mj2"/>
+                    <navigationItem key="navigationItem" title="Backup" style="editor" id="RQ7-QU-Mj2"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cJb-di-PVu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -982,7 +1014,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Rz4-Wk-lSI"/>
+        <segue reference="cmN-hv-wBA"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="addIcon" width="64" height="64"/>
