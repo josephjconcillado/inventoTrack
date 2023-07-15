@@ -112,13 +112,13 @@ class ProductsViewController: UIViewController, ProductDetailsViewControllerDele
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
         sortOptions = [
             SortOption(title: "Sort By Name",sortValue: "pName"),
             SortOption(title: "Sort By Date",sortValue: "pDateCreated"),
             SortOption(title: "Sort By Price",sortValue: "pPrice"),
             SortOption(title: "Sort By Quantity",sortValue: "pQty"),
         ]
+        fetchSortAndDisplayViewOptionFromStorage()
         fetchProductsFromStorage()
         setupBarButtonItems()
         setupCollectionView()
@@ -245,19 +245,17 @@ class ProductsViewController: UIViewController, ProductDetailsViewControllerDele
     }
     
     func fetchProductsFromStorage() {
-        var sortOptionsData = CoreDataManager.shared.fetchSortOption()
+        allProducts = CoreDataManager.shared.fetchProducts(sortOption: sortOptions[Int(sortOptionData.sortOption)].sortValue)
+    }
+    
+    func fetchSortAndDisplayViewOptionFromStorage() {
         
-        if sortOptionsData.isEmpty {
+        if CoreDataManager.shared.fetchSortOption().isEmpty {
             CoreDataManager.shared.initializeSortOption()
             CoreDataManager.shared.initializeViewOption()
-            viewOption = CoreDataManager.shared.fetchViewOption()
-            sortOptionsData = CoreDataManager.shared.fetchSortOption()
-            sortOptionData = sortOptionsData[0]
-        } else {
-            viewOption = CoreDataManager.shared.fetchViewOption()
-            sortOptionData = sortOptionsData[0]
         }
-        allProducts = CoreDataManager.shared.fetchProducts(sortOption: sortOptions[Int(sortOptionData.sortOption)].sortValue)
+        sortOptionData = CoreDataManager.shared.fetchSortOption()[0]
+        viewOption = CoreDataManager.shared.fetchViewOption()
         isToggled = viewOption[0].viewOption
     }
     
