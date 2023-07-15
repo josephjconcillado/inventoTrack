@@ -27,6 +27,7 @@ class ProductsViewController: UIViewController, ProductDetailsViewControllerDele
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var notifLbl: UILabel!
     
     
     //    var items: [ProductSample] = productDataSample
@@ -123,6 +124,7 @@ class ProductsViewController: UIViewController, ProductDetailsViewControllerDele
         setupBarButtonItems()
         setupCollectionView()
         checkItems()
+        notifLbl.isHidden = true
     }
     
     override func viewWillLayoutSubviews() {
@@ -191,9 +193,18 @@ class ProductsViewController: UIViewController, ProductDetailsViewControllerDele
     @objc func didSortButtonClicked(_ sender: UIBarButtonItem) {
         if self.sortOptionData.sortOption < self.sortOptions.count - 1 {
             self.sortOptionData.sortOption += 1
+            
         } else {
             self.sortOptionData.sortOption = 0
         }
+        
+        notifLbl.isHidden = false
+        notifLbl.text = sortOptions[Int(self.sortOptionData.sortOption)].title
+        animateLbl(y: 0, lbl: notifLbl)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.notifLbl.isHidden = true
+        }
+        
         self.fetchProductsFromStorage()
         CoreDataManager.shared.save()
         self.collectionView.reloadData()
@@ -206,11 +217,20 @@ class ProductsViewController: UIViewController, ProductDetailsViewControllerDele
             tableView.isHidden = true
             isToggled = !isToggled
             displayToggleBarButton.image = UIImage(systemName: "list.bullet")
+            notifLbl.text = "Grid"
         } else {
             collectionView.isHidden = true
             tableView.isHidden = false
             isToggled = !isToggled
             displayToggleBarButton.image = UIImage(systemName: "rectangle.grid.2x2")
+            notifLbl.text = "List"
+        }
+        
+        notifLbl.isHidden = false
+        
+        animateLbl(y: 0, lbl: notifLbl)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.notifLbl.isHidden = true
         }
     }
     
@@ -267,6 +287,14 @@ class ProductsViewController: UIViewController, ProductDetailsViewControllerDele
             selectBarButton.isEnabled = false
         } else {
             selectBarButton.isEnabled = true
+        }
+    }
+    
+    func animateLbl(y: CGFloat, lbl: UILabel) {
+        lbl.transform = CGAffineTransform(translationX: 0, y: -500)
+        //        let desiredY = (view.bounds.height * y)/2
+        UIView.animate(withDuration: 0.3) {
+            lbl.transform = CGAffineTransform(translationX: 0, y: y)
         }
     }
     
@@ -360,7 +388,7 @@ extension ProductsViewController: UICollectionViewDelegate, UICollectionViewData
 
 extension ProductsViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 100, height: 120)
+        return CGSize(width: 90, height: 120)
     }
 }
 
@@ -402,7 +430,7 @@ extension ProductsViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-
+        
         if mMode == .select {
             selectedIndexPath[indexPath] = false
         }
