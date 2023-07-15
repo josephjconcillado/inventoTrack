@@ -41,6 +41,10 @@ class AddProductViewController: UIViewController,BarcodeScannerViewControllerDel
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
         currentImage = imageView
+        
+        self.nameTF.delegate = self
+        self.barcodeTF.delegate = self
+        self.descriptionTF.delegate = self
     }
     
     @objc func keyboardWillShow(_ notification: Notification) {
@@ -68,8 +72,6 @@ class AddProductViewController: UIViewController,BarcodeScannerViewControllerDel
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         self.delegate?.reloadData()
-        
-        
         
         NotificationCenter.default.removeObserver(self)
     }
