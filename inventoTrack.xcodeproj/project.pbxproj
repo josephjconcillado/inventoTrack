@@ -37,6 +37,7 @@
 		0561F5B42A610D6F00B70A20 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0561F5B32A610D6F00B70A20 /* CoreDataManager.swift */; };
 		0561F5B72A61C74900B70A20 /* DisplayView+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0561F5B52A61C74900B70A20 /* DisplayView+CoreDataClass.swift */; };
 		0561F5B82A61C74900B70A20 /* DisplayView+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0561F5B62A61C74900B70A20 /* DisplayView+CoreDataProperties.swift */; };
+		3068941023D846422A9DC2D2 /* Pods_inventoTrack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A90462ECC8C4587877EED57B /* Pods_inventoTrack.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +73,9 @@
 		0561F5B32A610D6F00B70A20 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		0561F5B52A61C74900B70A20 /* DisplayView+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DisplayView+CoreDataClass.swift"; sourceTree = "<group>"; };
 		0561F5B62A61C74900B70A20 /* DisplayView+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DisplayView+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A90462ECC8C4587877EED57B /* Pods_inventoTrack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_inventoTrack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE554A341B15BE36EDCA1D0B /* Pods-inventoTrack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-inventoTrack.release.xcconfig"; path = "Target Support Files/Pods-inventoTrack/Pods-inventoTrack.release.xcconfig"; sourceTree = "<group>"; };
+		CAF47AD1B3C37A73A7E1EEA4 /* Pods-inventoTrack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-inventoTrack.debug.xcconfig"; path = "Target Support Files/Pods-inventoTrack/Pods-inventoTrack.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3068941023D846422A9DC2D2 /* Pods_inventoTrack.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +95,8 @@
 			children = (
 				0561F5612A6076EE00B70A20 /* inventoTrack */,
 				0561F5602A6076EE00B70A20 /* Products */,
+				A046B61B4D2B37EB04B020FB /* Pods */,
+				3949B5E024DA34127F484FC9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -219,6 +226,24 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		3949B5E024DA34127F484FC9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A90462ECC8C4587877EED57B /* Pods_inventoTrack.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A046B61B4D2B37EB04B020FB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CAF47AD1B3C37A73A7E1EEA4 /* Pods-inventoTrack.debug.xcconfig */,
+				BE554A341B15BE36EDCA1D0B /* Pods-inventoTrack.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -226,9 +251,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0561F5732A6076F000B70A20 /* Build configuration list for PBXNativeTarget "inventoTrack" */;
 			buildPhases = (
+				B120012788C241C4D734B8D5 /* [CP] Check Pods Manifest.lock */,
 				0561F55B2A6076EE00B70A20 /* Sources */,
 				0561F55C2A6076EE00B70A20 /* Frameworks */,
 				0561F55D2A6076EE00B70A20 /* Resources */,
+				C2EC8A07B7DC7AF22B4EEC6A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -286,6 +313,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B120012788C241C4D734B8D5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-inventoTrack-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C2EC8A07B7DC7AF22B4EEC6A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-inventoTrack/Pods-inventoTrack-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-inventoTrack/Pods-inventoTrack-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-inventoTrack/Pods-inventoTrack-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0561F55B2A6076EE00B70A20 /* Sources */ = {
@@ -458,6 +527,7 @@
 		};
 		0561F5742A6076F000B70A20 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CAF47AD1B3C37A73A7E1EEA4 /* Pods-inventoTrack.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -489,6 +559,7 @@
 		};
 		0561F5752A6076F000B70A20 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE554A341B15BE36EDCA1D0B /* Pods-inventoTrack.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
