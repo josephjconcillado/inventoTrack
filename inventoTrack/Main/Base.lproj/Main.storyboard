@@ -962,13 +962,161 @@
         <scene sceneID="63V-IB-2Jn">
             <objects>
                 <viewController id="uZ3-wv-4Gy" customClass="BackupViewController" customModule="inventoTrack" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="lU2-Ft-NbK">
+                    <view key="view" contentMode="scaleToFill" id="02l-DO-e2n">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="zsh-Hs-pMq"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.10999999940395355" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square.and.arrow.down.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="z3z-jR-PgP">
+                                <rect key="frame" x="25" y="118.00000000000003" width="380" height="302.66666666666674"/>
+                                <color key="tintColor" red="0.76676553489999999" green="0.47950476409999998" blue="0.26994159820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Offline" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o2P-O1-TvZ">
+                                <rect key="frame" x="25" y="143" width="380" height="28"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                <color key="textColor" red="0.58586436509999995" green="0.5258619189" blue="0.48786020279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Save all data locally..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JLN-oM-6zS">
+                                <rect key="frame" x="25" y="186" width="380" height="25"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
+                                <color key="textColor" red="0.58586436509999995" green="0.5258619189" blue="0.48786020279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zMp-lt-PkJ">
+                                <rect key="frame" x="25" y="231" width="380" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="GO3-xK-xfN"/>
+                                </constraints>
+                                <color key="tintColor" red="0.58586436509999995" green="0.5258619189" blue="0.48786020279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Save" cornerStyle="capsule">
+                                    <fontDescription key="titleFontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="18"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="saveBackup:" destination="uZ3-wv-4Gy" eventType="touchUpInside" id="gk7-bl-Pou"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restore data locally..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WFK-H8-Vyy">
+                                <rect key="frame" x="25" y="306" width="380" height="25"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
+                                <color key="textColor" red="0.58586436509999995" green="0.5258619189" blue="0.48786020279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MFX-rx-Nl9">
+                                <rect key="frame" x="25" y="351" width="380" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="D8H-zb-7ne"/>
+                                </constraints>
+                                <color key="tintColor" red="0.58586436509999995" green="0.5258619189" blue="0.48786020279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Restore" cornerStyle="capsule">
+                                    <fontDescription key="titleFontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="18"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="restoreBackup:" destination="uZ3-wv-4Gy" eventType="touchUpInside" id="RCL-F2-1f7"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.10999999940395355" contentMode="scaleAspectFit" image="google-drive-logo" translatesAutoresizingMaskIntoConstraints="NO" id="dTK-x6-dfU">
+                                <rect key="frame" x="25" y="464.33333333333326" width="380" height="303"/>
+                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Online" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jqp-Gw-TYY">
+                                <rect key="frame" x="25" y="489.33333333333331" width="380" height="27.999999999999943"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                <color key="textColor" red="0.58586436509999995" green="0.5258619189" blue="0.48786020279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Save all data to google drive..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5rZ-NS-IXI">
+                                <rect key="frame" x="25" y="532.33333333333337" width="380" height="25"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
+                                <color key="textColor" red="0.58586436509999995" green="0.5258619189" blue="0.48786020279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eqe-YS-naz">
+                                <rect key="frame" x="25" y="577.33333333333337" width="380" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="tlI-JM-uJG"/>
+                                </constraints>
+                                <color key="tintColor" red="0.58586436509999995" green="0.5258619189" blue="0.48786020279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Upload" cornerStyle="capsule">
+                                    <fontDescription key="titleFontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="18"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="uploadToGoogleDrive:" destination="uZ3-wv-4Gy" eventType="touchUpInside" id="aEo-nH-Ps4"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restore data from google drive..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LsV-U9-Pxe">
+                                <rect key="frame" x="25" y="652.33333333333337" width="380" height="25"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
+                                <color key="textColor" red="0.58586436509999995" green="0.5258619189" blue="0.48786020279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nr3-qM-eU5">
+                                <rect key="frame" x="25" y="697.33333333333337" width="380" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="Rpb-6x-HAn"/>
+                                </constraints>
+                                <color key="tintColor" red="0.58586436509999995" green="0.5258619189" blue="0.48786020279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Restore" cornerStyle="capsule">
+                                    <fontDescription key="titleFontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="18"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="restoreFromGoogleDrive:" destination="uZ3-wv-4Gy" eventType="touchUpInside" id="Gww-nL-y7k"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="S4j-HD-Z5T"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="S4j-HD-Z5T" firstAttribute="trailing" secondItem="eqe-YS-naz" secondAttribute="trailing" constant="25" id="0JP-Pg-i6y"/>
+                            <constraint firstItem="nr3-qM-eU5" firstAttribute="top" secondItem="LsV-U9-Pxe" secondAttribute="bottom" constant="20" id="0Vp-w0-95L"/>
+                            <constraint firstItem="LsV-U9-Pxe" firstAttribute="top" secondItem="eqe-YS-naz" secondAttribute="bottom" constant="30" id="2T7-d5-LIZ"/>
+                            <constraint firstItem="S4j-HD-Z5T" firstAttribute="trailing" secondItem="dTK-x6-dfU" secondAttribute="trailing" constant="25" id="2dZ-XO-Qhm"/>
+                            <constraint firstItem="Jqp-Gw-TYY" firstAttribute="top" secondItem="02l-DO-e2n" secondAttribute="centerY" multiplier="1.05" id="2ff-rd-ucc"/>
+                            <constraint firstItem="5rZ-NS-IXI" firstAttribute="leading" secondItem="S4j-HD-Z5T" secondAttribute="leading" constant="25" id="3BH-vr-erZ"/>
+                            <constraint firstItem="o2P-O1-TvZ" firstAttribute="leading" secondItem="S4j-HD-Z5T" secondAttribute="leading" constant="25" id="84R-hF-EWz"/>
+                            <constraint firstItem="dTK-x6-dfU" firstAttribute="top" secondItem="Jqp-Gw-TYY" secondAttribute="top" constant="-25" id="A1H-OT-TJk"/>
+                            <constraint firstItem="5rZ-NS-IXI" firstAttribute="top" secondItem="Jqp-Gw-TYY" secondAttribute="bottom" constant="15" id="AeF-N9-Sb1"/>
+                            <constraint firstItem="z3z-jR-PgP" firstAttribute="leading" secondItem="S4j-HD-Z5T" secondAttribute="leading" constant="25" id="BSY-VL-bHc"/>
+                            <constraint firstItem="LsV-U9-Pxe" firstAttribute="leading" secondItem="S4j-HD-Z5T" secondAttribute="leading" constant="25" id="Dmf-1v-ZDH"/>
+                            <constraint firstItem="z3z-jR-PgP" firstAttribute="bottom" secondItem="MFX-rx-Nl9" secondAttribute="bottom" constant="25" id="NbC-3x-xoq"/>
+                            <constraint firstItem="S4j-HD-Z5T" firstAttribute="trailing" secondItem="Jqp-Gw-TYY" secondAttribute="trailing" constant="25" id="Pgb-T4-X5g"/>
+                            <constraint firstItem="Jqp-Gw-TYY" firstAttribute="leading" secondItem="S4j-HD-Z5T" secondAttribute="leading" constant="25" id="QBL-2z-xRq"/>
+                            <constraint firstItem="eqe-YS-naz" firstAttribute="leading" secondItem="S4j-HD-Z5T" secondAttribute="leading" constant="25" id="QT7-RF-Z6H"/>
+                            <constraint firstItem="eqe-YS-naz" firstAttribute="top" secondItem="5rZ-NS-IXI" secondAttribute="bottom" constant="20" id="Ri4-Qs-DMP"/>
+                            <constraint firstItem="JLN-oM-6zS" firstAttribute="leading" secondItem="S4j-HD-Z5T" secondAttribute="leading" constant="25" id="Wid-yC-RJs"/>
+                            <constraint firstItem="zMp-lt-PkJ" firstAttribute="top" secondItem="JLN-oM-6zS" secondAttribute="bottom" constant="20" id="YDn-Bl-HhB"/>
+                            <constraint firstItem="dTK-x6-dfU" firstAttribute="bottom" secondItem="nr3-qM-eU5" secondAttribute="bottom" constant="25" id="ZgP-ps-btT"/>
+                            <constraint firstItem="S4j-HD-Z5T" firstAttribute="trailing" secondItem="JLN-oM-6zS" secondAttribute="trailing" constant="25" id="Zmd-9Z-ERq"/>
+                            <constraint firstItem="S4j-HD-Z5T" firstAttribute="trailing" secondItem="o2P-O1-TvZ" secondAttribute="trailing" constant="25" id="azp-8G-sxR"/>
+                            <constraint firstItem="S4j-HD-Z5T" firstAttribute="trailing" secondItem="MFX-rx-Nl9" secondAttribute="trailing" constant="25" id="e4R-5b-sHq"/>
+                            <constraint firstItem="MFX-rx-Nl9" firstAttribute="top" secondItem="WFK-H8-Vyy" secondAttribute="bottom" constant="20" id="eYr-g1-cG3"/>
+                            <constraint firstItem="dTK-x6-dfU" firstAttribute="leading" secondItem="S4j-HD-Z5T" secondAttribute="leading" constant="25" id="evm-6V-2da"/>
+                            <constraint firstItem="MFX-rx-Nl9" firstAttribute="leading" secondItem="S4j-HD-Z5T" secondAttribute="leading" constant="25" id="eyO-Re-e0o"/>
+                            <constraint firstItem="zMp-lt-PkJ" firstAttribute="leading" secondItem="S4j-HD-Z5T" secondAttribute="leading" constant="25" id="fNa-Sm-O5U"/>
+                            <constraint firstItem="S4j-HD-Z5T" firstAttribute="trailing" secondItem="WFK-H8-Vyy" secondAttribute="trailing" constant="25" id="gwS-hv-OIl"/>
+                            <constraint firstItem="MFX-rx-Nl9" firstAttribute="bottom" secondItem="02l-DO-e2n" secondAttribute="centerY" multiplier="0.85" id="hcc-6N-Uyc"/>
+                            <constraint firstItem="S4j-HD-Z5T" firstAttribute="trailing" secondItem="5rZ-NS-IXI" secondAttribute="trailing" constant="25" id="iDB-Iy-94K"/>
+                            <constraint firstItem="S4j-HD-Z5T" firstAttribute="trailing" secondItem="z3z-jR-PgP" secondAttribute="trailing" constant="25" id="ipE-0h-nGe"/>
+                            <constraint firstItem="S4j-HD-Z5T" firstAttribute="trailing" secondItem="LsV-U9-Pxe" secondAttribute="trailing" constant="25" id="kVw-3t-3Cb"/>
+                            <constraint firstItem="z3z-jR-PgP" firstAttribute="top" secondItem="o2P-O1-TvZ" secondAttribute="top" constant="-25" id="mZh-iZ-rxx"/>
+                            <constraint firstItem="WFK-H8-Vyy" firstAttribute="leading" secondItem="S4j-HD-Z5T" secondAttribute="leading" constant="25" id="pYn-sr-DCr"/>
+                            <constraint firstItem="S4j-HD-Z5T" firstAttribute="trailing" secondItem="zMp-lt-PkJ" secondAttribute="trailing" constant="25" id="ucS-Xu-j5y"/>
+                            <constraint firstItem="S4j-HD-Z5T" firstAttribute="trailing" secondItem="nr3-qM-eU5" secondAttribute="trailing" constant="25" id="wNg-Mb-OLT"/>
+                            <constraint firstItem="JLN-oM-6zS" firstAttribute="top" secondItem="o2P-O1-TvZ" secondAttribute="bottom" constant="15" id="xKV-Vn-hIE"/>
+                            <constraint firstItem="nr3-qM-eU5" firstAttribute="leading" secondItem="S4j-HD-Z5T" secondAttribute="leading" constant="25" id="xfi-rK-UIb"/>
+                            <constraint firstItem="WFK-H8-Vyy" firstAttribute="top" secondItem="zMp-lt-PkJ" secondAttribute="bottom" constant="30" id="zYO-zz-XPk"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Backup" style="editor" id="RQ7-QU-Mj2"/>
+                    <connections>
+                        <outlet property="googleDriveImg" destination="dTK-x6-dfU" id="kC6-e0-wkI"/>
+                        <outlet property="offlineImg" destination="z3z-jR-PgP" id="We4-Vc-0BV"/>
+                        <outlet property="restoreGoogleBtn" destination="nr3-qM-eU5" id="Uvf-kz-5DW"/>
+                        <outlet property="uploadGoogleBtn" destination="eqe-YS-naz" id="1wv-8c-kl6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cJb-di-PVu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1022,9 +1170,11 @@
         <image name="backupIcon" width="64" height="64"/>
         <image name="barcode.viewfinder" catalog="system" width="128" height="115"/>
         <image name="chartIcon2" width="64" height="64"/>
+        <image name="google-drive-logo" width="37.666667938232422" height="33.333332061767578"/>
         <image name="photo" catalog="system" width="128" height="93"/>
         <image name="productsIcon" width="64" height="64"/>
         <image name="settingsIcon" width="64" height="64"/>
+        <image name="square.and.arrow.down.fill" catalog="system" width="121" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

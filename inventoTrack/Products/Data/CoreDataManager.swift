@@ -153,24 +153,26 @@ extension CoreDataManager {
                             // Handle Date attribute
                             object.setValue(date, forKey: key)
                         }
-                    } else if key == "pQty" {
-                        if value is Int {
-                            if let intValue = value as? Int, let num = convertIntToString(num: intValue) {
-                                // Handle Date attribute
-                                object.setValue(num, forKey: key)
-                            }
-                        }  else {
-                            object.setValue(value, forKey: key)
-                        }
-                    } else if key == "pPrice" {
-                        if value is Double {
-                            if let doubleValue = value as? Double, let double = convertDoubleToString(double: doubleValue) {
-                                object.setValue(double, forKey: key)
-                            }
-                        } else {
-                            object.setValue(value, forKey: key)
-                        }
-                    } else {
+                    }
+//                        else if key == "pQty" {
+//                        if value is Int {
+//                            if let intValue = value as? Int, let num = convertIntToString(num: intValue) {
+//                                // Handle Date attribute
+//                                object.setValue(num, forKey: key)
+//                            }
+//                        }  else {
+//                            object.setValue(value, forKey: key)
+//                        }
+//                    } else if key == "pPrice" {
+//                        if value is Double {
+//                            if let doubleValue = value as? Double, let double = convertDoubleToString(double: doubleValue) {
+//                                object.setValue(double, forKey: key)
+//                            }
+//                        } else {
+//                            object.setValue(value, forKey: key)
+//                        }
+//                    }
+                    else {
                         object.setValue(value, forKey: key)
                     }
                     
