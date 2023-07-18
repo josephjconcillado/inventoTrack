@@ -232,7 +232,6 @@
 				B2E70DC8DD78A79B9B565A4F /* Pods-inventoTrack.debug.xcconfig */,
 				69ABBB2EB98F92F5AA945A44 /* Pods-inventoTrack.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};

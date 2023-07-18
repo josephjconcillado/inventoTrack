@@ -154,24 +154,35 @@ extension CoreDataManager {
                             object.setValue(date, forKey: key)
                         }
                     }
-//                        else if key == "pQty" {
-//                        if value is Int {
-//                            if let intValue = value as? Int, let num = convertIntToString(num: intValue) {
-//                                // Handle Date attribute
-//                                object.setValue(num, forKey: key)
-//                            }
-//                        }  else {
-//                            object.setValue(value, forKey: key)
-//                        }
-//                    } else if key == "pPrice" {
-//                        if value is Double {
-//                            if let doubleValue = value as? Double, let double = convertDoubleToString(double: doubleValue) {
-//                                object.setValue(double, forKey: key)
-//                            }
-//                        } else {
-//                            object.setValue(value, forKey: key)
-//                        }
-//                    }
+                    else if key == "pQty" {
+                        //                        if value is Int {
+                        //                            if let intValue = value as? Int, let num = convertIntToInt32(num: intValue) {
+                        //                                // Handle Date attribute
+                        //                                object.setValue(num, forKey: key)
+                        //                            }
+                        //                        }  else
+                        if value is String {
+                            if let intValue = value as? String, let num = convertStringToInt(num: intValue) {
+                                object.setValue(num, forKey: key)
+                            }
+                        } else {
+                            object.setValue(value, forKey: key)
+                        }
+                    }
+                    else if key == "pPrice" {
+                        //                        if value is Double {
+                        //                            if let doubleValue = value as? Double, let double = convertDoubleToDouble(double: doubleValue) {
+                        //                                object.setValue(double, forKey: key)
+                        //                            }
+                        //                        } else
+                        if value is String {
+                            if let intValue = value as? String, let num = convertStringToDouble(num: intValue) {
+                                object.setValue(num, forKey: key)
+                            }
+                        } else {
+                            object.setValue(value, forKey: key)
+                        }
+                    }
                     else {
                         object.setValue(value, forKey: key)
                     }
@@ -199,13 +210,20 @@ extension CoreDataManager {
         return Data(base64Encoded: base64String)
     }
     
-    func convertIntToString(num: Int) -> String? {
-        return String(num)
+    func convertIntToInt32(num: Int) -> Int32? {
+        return Int32(num)
         
     }
+    func convertStringToInt(num: String) -> Int? {
+        return Int(num)
+    }
     
-    func convertDoubleToString(double: Double) -> String? {
-        return String(double)
+    func convertStringToDouble(num: String) -> Double? {
+        return Double(num)
+    }
+    
+    func convertDoubleToDouble(double: Double) -> Double? {
+        return Double(double)
     }
     
 }
