@@ -1,6 +1,0 @@
-framework module Pods_inventoTrack {
-  umbrella header "Pods-inventoTrack-umbrella.h"
-
-  export *
-  module * { export * }
-}
