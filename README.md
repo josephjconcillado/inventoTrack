@@ -25,7 +25,7 @@ To install and run the inventoTrack app on your iOS device or simulator, follow 
 <br>    2.1. sudo gem install cocoapods
 <br>    2.2. cd /path/to/the/folder/inventoTrack
 <br>    2.2. pod install
-3. Open the project in Xcode by double-clicking the `inventoTrack.xcworkspace` file.
+3. Open the project in Xcode by double-clicking the `inventoTrack.xcodeproj` file.
 4. Select your target device or simulator from the device menu in Xcode.
 5. Build and run the project using the play button or by pressing ⌘R.
 <br>
