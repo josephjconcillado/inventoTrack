@@ -46,3 +46,13 @@ inventoTrack is currently not available under any specific license. All rights r
 ## Contact
 
 For any inquiries or questions, please reach out to me at jconcillado@jcdevworks.website or visit our GitHub repository at [https://github.com/josephjconcillado/inventoTrack](https://github.com/josephjconcillado/inventoTrack).
+
+## Credits
+
+<br>Icons: Icons8 (https://icons8.com). All icons are used under license and their extraction and reuse are prohibited without explicit permission from Icons8.
+<br>Images:
+<br>onboardImage1 by storyset on Freepik (https://www.freepik.com/free-vector/checking-boxes-concept-illustration_8832806.htm)
+<br>onboardImage2 by storyset on Freepik (https://www.freepik.com/free-vector/barcode-concept-illustration_17195481.htm)
+<br>onboardImage3 by storyset on Freepik (https://www.freepik.com/free-vector/image-viewer-concept-illustration_12464559.htm)
+<br>onboardImage4 by storyset on Freepik (https://www.freepik.com/free-vector/image-upload-concept-illustration_6189389.htm)
+<br>onboardImage5 by storyset on Freepik (https://www.freepik.com/free-vector/spreadsheets-concept-illustration_6450135.htm)
