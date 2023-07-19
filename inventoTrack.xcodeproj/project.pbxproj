@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		055BFACE2A68A52C00B61302 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 055BFACD2A68A52C00B61302 /* GoogleSignIn */; };
+		055BFAD02A68A52C00B61302 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 055BFACF2A68A52C00B61302 /* GoogleSignInSwift */; };
+		055BFAD32A68A64000B61302 /* DGCharts in Frameworks */ = {isa = PBXBuildFile; productRef = 055BFAD22A68A64000B61302 /* DGCharts */; };
 		0561F5632A6076EE00B70A20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0561F5622A6076EE00B70A20 /* AppDelegate.swift */; };
 		0561F5652A6076EE00B70A20 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0561F5642A6076EE00B70A20 /* SceneDelegate.swift */; };
 		0561F56A2A6076EE00B70A20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0561F5682A6076EE00B70A20 /* Main.storyboard */; };
@@ -37,7 +40,6 @@
 		0561F5B42A610D6F00B70A20 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0561F5B32A610D6F00B70A20 /* CoreDataManager.swift */; };
 		0561F5B72A61C74900B70A20 /* DisplayView+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0561F5B52A61C74900B70A20 /* DisplayView+CoreDataClass.swift */; };
 		0561F5B82A61C74900B70A20 /* DisplayView+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0561F5B62A61C74900B70A20 /* DisplayView+CoreDataProperties.swift */; };
-		831386B5569FFD86B04D8233 /* Pods_inventoTrack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56E86316A3599DD82A14D62B /* Pods_inventoTrack.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,9 +75,6 @@
 		0561F5B32A610D6F00B70A20 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		0561F5B52A61C74900B70A20 /* DisplayView+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DisplayView+CoreDataClass.swift"; sourceTree = "<group>"; };
 		0561F5B62A61C74900B70A20 /* DisplayView+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DisplayView+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		56E86316A3599DD82A14D62B /* Pods_inventoTrack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_inventoTrack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		69ABBB2EB98F92F5AA945A44 /* Pods-inventoTrack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-inventoTrack.release.xcconfig"; path = "Target Support Files/Pods-inventoTrack/Pods-inventoTrack.release.xcconfig"; sourceTree = "<group>"; };
-		B2E70DC8DD78A79B9B565A4F /* Pods-inventoTrack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-inventoTrack.debug.xcconfig"; path = "Target Support Files/Pods-inventoTrack/Pods-inventoTrack.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +82,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				831386B5569FFD86B04D8233 /* Pods_inventoTrack.framework in Frameworks */,
+				055BFACE2A68A52C00B61302 /* GoogleSignIn in Frameworks */,
+				055BFAD32A68A64000B61302 /* DGCharts in Frameworks */,
+				055BFAD02A68A52C00B61302 /* GoogleSignInSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,8 +96,6 @@
 			children = (
 				0561F5612A6076EE00B70A20 /* inventoTrack */,
 				0561F5602A6076EE00B70A20 /* Products */,
-				F13AE11E6F81CB2EB52ADDA1 /* Pods */,
-				FA6489E5F325A06A0DFFC89A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -226,23 +225,6 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
-		F13AE11E6F81CB2EB52ADDA1 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				B2E70DC8DD78A79B9B565A4F /* Pods-inventoTrack.debug.xcconfig */,
-				69ABBB2EB98F92F5AA945A44 /* Pods-inventoTrack.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
-		FA6489E5F325A06A0DFFC89A /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				56E86316A3599DD82A14D62B /* Pods_inventoTrack.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -250,17 +232,20 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0561F5732A6076F000B70A20 /* Build configuration list for PBXNativeTarget "inventoTrack" */;
 			buildPhases = (
-				9079E8D8064065EC4E11325A /* [CP] Check Pods Manifest.lock */,
 				0561F55B2A6076EE00B70A20 /* Sources */,
 				0561F55C2A6076EE00B70A20 /* Frameworks */,
 				0561F55D2A6076EE00B70A20 /* Resources */,
-				926D2DDAF57A62DD3FE7FB0F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = inventoTrack;
+			packageProductDependencies = (
+				055BFACD2A68A52C00B61302 /* GoogleSignIn */,
+				055BFACF2A68A52C00B61302 /* GoogleSignInSwift */,
+				055BFAD22A68A64000B61302 /* DGCharts */,
+			);
 			productName = inventoTrack;
 			productReference = 0561F55F2A6076EE00B70A20 /* inventoTrack.app */;
 			productType = "com.apple.product-type.application";
@@ -289,6 +274,10 @@
 				Base,
 			);
 			mainGroup = 0561F5562A6076EE00B70A20;
+			packageReferences = (
+				055BFACC2A68A52C00B61302 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+				055BFAD12A68A64000B61302 /* XCRemoteSwiftPackageReference "Charts" */,
+			);
 			productRefGroup = 0561F5602A6076EE00B70A20 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -312,48 +301,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		9079E8D8064065EC4E11325A /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-inventoTrack-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		926D2DDAF57A62DD3FE7FB0F /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-inventoTrack/Pods-inventoTrack-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-inventoTrack/Pods-inventoTrack-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-inventoTrack/Pods-inventoTrack-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0561F55B2A6076EE00B70A20 /* Sources */ = {
@@ -526,7 +473,6 @@
 		};
 		0561F5742A6076F000B70A20 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B2E70DC8DD78A79B9B565A4F /* Pods-inventoTrack.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -558,7 +504,6 @@
 		};
 		0561F5752A6076F000B70A20 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 69ABBB2EB98F92F5AA945A44 /* Pods-inventoTrack.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -610,6 +555,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		055BFACC2A68A52C00B61302 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+		055BFAD12A68A64000B61302 /* XCRemoteSwiftPackageReference "Charts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/danielgindi/Charts";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		055BFACD2A68A52C00B61302 /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 055BFACC2A68A52C00B61302 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		055BFACF2A68A52C00B61302 /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 055BFACC2A68A52C00B61302 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
+		};
+		055BFAD22A68A64000B61302 /* DGCharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 055BFAD12A68A64000B61302 /* XCRemoteSwiftPackageReference "Charts" */;
+			productName = DGCharts;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		0561F5A42A610B6F00B70A20 /* MyProducts.xcdatamodeld */ = {
