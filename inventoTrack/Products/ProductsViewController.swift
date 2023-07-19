@@ -28,6 +28,7 @@ class ProductsViewController: UIViewController, ProductDetailsViewControllerDele
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var notifLbl: UILabel!
+    @IBOutlet weak var notifBck: UIView!
     
     
     //    var items: [ProductSample] = productDataSample
@@ -125,6 +126,8 @@ class ProductsViewController: UIViewController, ProductDetailsViewControllerDele
         setupCollectionView()
         checkItems()
         notifLbl.isHidden = true
+        notifBck.isHidden = true
+        
     }
     
     override func viewWillLayoutSubviews() {
@@ -199,10 +202,12 @@ class ProductsViewController: UIViewController, ProductDetailsViewControllerDele
         }
         
         notifLbl.isHidden = false
+        notifBck.isHidden = false
         notifLbl.text = sortOptions[Int(self.sortOptionData.sortOption)].title
         animateLbl(y: 0, lbl: notifLbl)
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.notifLbl.isHidden = true
+            self.notifBck.isHidden = true
         }
         
         self.fetchProductsFromStorage()
@@ -227,10 +232,15 @@ class ProductsViewController: UIViewController, ProductDetailsViewControllerDele
         }
         
         notifLbl.isHidden = false
+        notifBck.isHidden = false
+        view.sendSubviewToBack(collectionView)
+        view.sendSubviewToBack(tableView)
+        view.bringSubviewToFront(notifLbl)
         
         animateLbl(y: 0, lbl: notifLbl)
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.notifLbl.isHidden = true
+            self.notifBck.isHidden = true
         }
     }
     

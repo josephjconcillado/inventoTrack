@@ -37,8 +37,8 @@ class BackupViewController: UIViewController, UIDocumentPickerDelegate {
         
         UIView.animate(withDuration: 3.0, delay: 0.0, options: [.autoreverse, .repeat], animations: {
             // Update the properties you want to animate
-            self.googleDriveImg.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
-            self.offlineImg.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+            self.googleDriveImg.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
+            self.offlineImg.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
         }, completion: nil)
     }
     
