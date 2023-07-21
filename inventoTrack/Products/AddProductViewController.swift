@@ -27,6 +27,7 @@ class AddProductViewController: UIViewController,BarcodeScannerViewControllerDel
     @IBOutlet weak var addBtn: UIButton!
     @IBOutlet weak var barcodeScanBtn: UIButton!
     @IBOutlet weak var dollarSymLbl: UILabel!
+    @IBOutlet weak var tapToAddImageLbl: PaddingLabel!
     
     
     var delegate: ProductDetailsViewControllerDelegate?
@@ -276,6 +277,7 @@ class AddProductViewController: UIViewController,BarcodeScannerViewControllerDel
         }
         imageView.image = image
         viewStateChanged = true
+        tapToAddImageLbl.isHidden = true
     }
     
     

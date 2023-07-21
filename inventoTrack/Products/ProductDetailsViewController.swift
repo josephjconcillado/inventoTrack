@@ -36,6 +36,7 @@ class ProductDetailsViewController: UIViewController, UITextFieldDelegate, Barco
     
     @IBOutlet var popOverView: UIView!
     @IBOutlet weak var dollarSymLbl: UILabel!
+    @IBOutlet weak var tapToChangeImageLbl: PaddingLabel!
     
     var selectedIndex: Int!
     var delegate: ProductDetailsViewControllerDelegate?
@@ -314,6 +315,7 @@ class ProductDetailsViewController: UIViewController, UITextFieldDelegate, Barco
         sender.isHidden = true
         saveBtn.isHidden = false
         saveBtn.isEnabled = false
+        tapToChangeImageLbl.isHidden = false
         enableTextField()
     }
     
@@ -387,6 +389,7 @@ class ProductDetailsViewController: UIViewController, UITextFieldDelegate, Barco
         if curImageView != image {
             saveBtn.isEnabled = true
             viewStateChanged = true
+            tapToChangeImageLbl.isHidden = true
         }
         imageView.image = image
         

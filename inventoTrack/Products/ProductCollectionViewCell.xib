@@ -26,8 +26,8 @@
                         <color key="textColor" red="0.58586436509999995" green="0.5258619189" blue="0.48786020279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="123" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hMZ-8Q-Wyv" customClass="PaddingBorder" customModule="inventoTrack" customModuleProvider="target">
-                        <rect key="frame" x="204.66666666666666" y="7.6666666666666679" width="39" height="45"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="123" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hMZ-8Q-Wyv" customClass="PaddingLabel" customModule="inventoTrack" customModuleProvider="target">
+                        <rect key="frame" x="224.66666666666666" y="7.6666666666666679" width="19" height="45"/>
                         <color key="backgroundColor" red="0.76676553489999999" green="0.47950476409999998" blue="0.26994159820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                         <color key="textColor" systemColor="systemGray6Color"/>
@@ -97,11 +97,6 @@
             <point key="canvasLocation" x="139" y="20"/>
         </collectionViewCell>
     </objects>
-    <designables>
-        <designable name="hMZ-8Q-Wyv">
-            <size key="intrinsicContentSize" width="39" height="43.333333333333336"/>
-        </designable>
-    </designables>
     <resources>
         <image name="checkmark.circle.fill" catalog="system" width="128" height="123"/>
         <systemColor name="systemGray6Color">
