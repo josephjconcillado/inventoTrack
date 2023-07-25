@@ -38,11 +38,7 @@
 		0561F5A62A610B6F00B70A20 /* MyProducts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0561F5A42A610B6F00B70A20 /* MyProducts.xcdatamodeld */; };
 		0561F5AD2A610D0B00B70A20 /* Product+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0561F5A72A610D0B00B70A20 /* Product+CoreDataClass.swift */; };
 		0561F5AE2A610D0B00B70A20 /* Product+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0561F5A82A610D0B00B70A20 /* Product+CoreDataProperties.swift */; };
-		0561F5B12A610D0B00B70A20 /* Sort+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0561F5AB2A610D0B00B70A20 /* Sort+CoreDataClass.swift */; };
-		0561F5B22A610D0B00B70A20 /* Sort+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0561F5AC2A610D0B00B70A20 /* Sort+CoreDataProperties.swift */; };
 		0561F5B42A610D6F00B70A20 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0561F5B32A610D6F00B70A20 /* CoreDataManager.swift */; };
-		0561F5B72A61C74900B70A20 /* DisplayView+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0561F5B52A61C74900B70A20 /* DisplayView+CoreDataClass.swift */; };
-		0561F5B82A61C74900B70A20 /* DisplayView+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0561F5B62A61C74900B70A20 /* DisplayView+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,11 +72,7 @@
 		0561F5A52A610B6F00B70A20 /* MyProducts.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyProducts.xcdatamodel; sourceTree = "<group>"; };
 		0561F5A72A610D0B00B70A20 /* Product+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Product+CoreDataClass.swift"; sourceTree = "<group>"; };
 		0561F5A82A610D0B00B70A20 /* Product+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Product+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		0561F5AB2A610D0B00B70A20 /* Sort+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sort+CoreDataClass.swift"; sourceTree = "<group>"; };
-		0561F5AC2A610D0B00B70A20 /* Sort+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sort+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		0561F5B32A610D6F00B70A20 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
-		0561F5B52A61C74900B70A20 /* DisplayView+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DisplayView+CoreDataClass.swift"; sourceTree = "<group>"; };
-		0561F5B62A61C74900B70A20 /* DisplayView+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DisplayView+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,15 +163,12 @@
 		0561F5772A6078B200B70A20 /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				05CD1D0E2A6F676B0045ABB7 /* ProductViewCell */,
 				055537282A6A3AFD001DE13C /* AddProductView */,
 				055537272A6A3AEE001DE13C /* ProductDetailsView */,
 				055537242A6A14D7001DE13C /* ProductsView */,
 				0561F5912A607D5400B70A20 /* Data */,
 				0561F5902A607D4800B70A20 /* Barcode */,
-				0561F5992A60E58D00B70A20 /* ProductCollectionViewCell.swift */,
-				0561F59A2A60E58D00B70A20 /* ProductCollectionViewCell.xib */,
-				0561F59F2A6102CA00B70A20 /* ProductTableViewCell.swift */,
-				0561F5A02A6102CA00B70A20 /* ProductTableViewCell.xib */,
 			);
 			path = Products;
 			sourceTree = "<group>";
@@ -240,10 +229,6 @@
 			children = (
 				0561F5A72A610D0B00B70A20 /* Product+CoreDataClass.swift */,
 				0561F5A82A610D0B00B70A20 /* Product+CoreDataProperties.swift */,
-				0561F5B52A61C74900B70A20 /* DisplayView+CoreDataClass.swift */,
-				0561F5B62A61C74900B70A20 /* DisplayView+CoreDataProperties.swift */,
-				0561F5AB2A610D0B00B70A20 /* Sort+CoreDataClass.swift */,
-				0561F5AC2A610D0B00B70A20 /* Sort+CoreDataProperties.swift */,
 				0561F5A42A610B6F00B70A20 /* MyProducts.xcdatamodeld */,
 				0561F5B32A610D6F00B70A20 /* CoreDataManager.swift */,
 			);
@@ -256,6 +241,17 @@
 				0561F5972A60DD8500B70A20 /* HomeViewController.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		05CD1D0E2A6F676B0045ABB7 /* ProductViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				0561F5992A60E58D00B70A20 /* ProductCollectionViewCell.swift */,
+				0561F59A2A60E58D00B70A20 /* ProductCollectionViewCell.xib */,
+				0561F59F2A6102CA00B70A20 /* ProductTableViewCell.swift */,
+				0561F5A02A6102CA00B70A20 /* ProductTableViewCell.xib */,
+			);
+			path = ProductViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -343,8 +339,6 @@
 				0561F5852A6079E900B70A20 /* BackupViewController.swift in Sources */,
 				0555372A2A6C33D5001DE13C /* ProductsViewControllerExtension.swift in Sources */,
 				0561F58F2A607D2C00B70A20 /* AboutSettingsViewController.swift in Sources */,
-				0561F5B12A610D0B00B70A20 /* Sort+CoreDataClass.swift in Sources */,
-				0561F5B22A610D0B00B70A20 /* Sort+CoreDataProperties.swift in Sources */,
 				0561F5932A607D7600B70A20 /* BarcodeScannerViewController.swift in Sources */,
 				0561F5872A607A0000B70A20 /* OnboardViewController.swift in Sources */,
 				0561F59E2A60ECFC00B70A20 /* PaddingLabel.swift in Sources */,
@@ -355,10 +349,8 @@
 				0561F59B2A60E58D00B70A20 /* ProductCollectionViewCell.swift in Sources */,
 				0561F5AE2A610D0B00B70A20 /* Product+CoreDataProperties.swift in Sources */,
 				0561F5812A6079C500B70A20 /* ReportViewController.swift in Sources */,
-				0561F5B82A61C74900B70A20 /* DisplayView+CoreDataProperties.swift in Sources */,
 				0561F5AD2A610D0B00B70A20 /* Product+CoreDataClass.swift in Sources */,
 				055537262A6A1513001DE13C /* ProductsViewModel.swift in Sources */,
-				0561F5B72A61C74900B70A20 /* DisplayView+CoreDataClass.swift in Sources */,
 				0555372C2A6C53C4001DE13C /* ProductsModel.swift in Sources */,
 				0561F5A62A610B6F00B70A20 /* MyProducts.xcdatamodeld in Sources */,
 				0561F5652A6076EE00B70A20 /* SceneDelegate.swift in Sources */,

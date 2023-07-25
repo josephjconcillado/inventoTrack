@@ -232,6 +232,11 @@ class ProductsViewModel {
                     tv.deleteRows(at: deleteNeededIndexPaths, with: .fade)
                     self.selectedIndexPath.removeAll()
                     self.manager.save()
+                    if self.products.isEmpty {
+                        self.mMode = .view
+                        self.selectBarButton.isEnabled = false
+                        self.setupMode(cv: cv, tv: tv)
+                    }
                 }
             }
         }

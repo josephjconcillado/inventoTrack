@@ -54,31 +54,6 @@ extension CoreDataManager {
         product.pImage = image
         save()
     }
-    func initializeSortOption() {
-        let sort = Sort(context: viewContext)
-        sort.sortOption = 1
-        save()
-    }
-    func initializeViewOption() {
-        let view = DisplayView(context: viewContext)
-        view.viewOption = false
-        save()
-    }
-    func fetchViewOption() -> [DisplayView] {
-        let request: NSFetchRequest<DisplayView> = DisplayView.fetchRequest()
-        return (try? viewContext.fetch(request)) ?? []
-    }
-    
-    func fetchSortOption() -> [Sort] {
-        let request: NSFetchRequest<Sort> = Sort.fetchRequest()
-        return (try? viewContext.fetch(request)) ?? []
-    }
-    
-    func updateSortOption(sortOption: Int16) {
-        let sort = Sort(context: viewContext)
-        sort.sortOption = sortOption
-        save()
-    }
     
     func fetchProducts() -> [Product] {
         let request: NSFetchRequest<Product> = Product.fetchRequest()
@@ -155,12 +130,6 @@ extension CoreDataManager {
                         }
                     }
                     else if key == "pQty" {
-                        //                        if value is Int {
-                        //                            if let intValue = value as? Int, let num = convertIntToInt32(num: intValue) {
-                        //                                // Handle Date attribute
-                        //                                object.setValue(num, forKey: key)
-                        //                            }
-                        //                        }  else
                         if value is String {
                             if let intValue = value as? String, let num = convertStringToInt(num: intValue) {
                                 object.setValue(num, forKey: key)
@@ -170,11 +139,6 @@ extension CoreDataManager {
                         }
                     }
                     else if key == "pPrice" {
-                        //                        if value is Double {
-                        //                            if let doubleValue = value as? Double, let double = convertDoubleToDouble(double: doubleValue) {
-                        //                                object.setValue(double, forKey: key)
-                        //                            }
-                        //                        } else
                         if value is String {
                             if let intValue = value as? String, let num = convertStringToDouble(num: intValue) {
                                 object.setValue(num, forKey: key)
