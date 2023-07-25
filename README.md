@@ -10,11 +10,11 @@ InventoTrack is a simple and intuitive inventory management app designed to help
 
 ## Features
 
-Easy Inventory Management: Seamlessly add, edit, and organize your inventory items.
-Product Photos: Attach photos to your inventory items, making it easier to identify products visually.
-Barcode Scanning: Use your device's camera to quickly scan barcodes for efficient item entry.
-Google Drive Backup: Safely store your data in the google drive and access it from multiple devices.
-Reports and Analytics: Gain insights into your inventory performance and make informed decisions.
+1. Easy Inventory Management: Seamlessly add, edit, and organize your inventory items.
+2. Product Photos: Attach photos to your inventory items, making it easier to identify products visually.
+3. Barcode Scanning: Use your device's camera to quickly scan barcodes for efficient item entry.
+4. Google Drive Backup: Safely store your data in the google drive and access it from multiple devices.
+5. Reports and Analytics: Gain insights into your inventory performance and make informed decisions.
 
 ## Installation
 
