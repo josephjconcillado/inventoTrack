@@ -34,7 +34,6 @@ class ProductDetailsViewController: UIViewController, UITextFieldDelegate, Barco
     
     @IBOutlet weak var barcodeScanBtn: UIButton!
     
-    @IBOutlet var popOverView: UIView!
     @IBOutlet weak var dollarSymLbl: UILabel!
     @IBOutlet weak var tapToChangeImageLbl: PaddingLabel!
     
@@ -108,6 +107,18 @@ class ProductDetailsViewController: UIViewController, UITextFieldDelegate, Barco
         barcodeTF.text = text
         barcodeTF.becomeFirstResponder()
         checkForm()
+    }
+    
+    func setup(product: Product) {
+        loadViewIfNeeded()
+        self.product = product
+        imageView.image = product.pImage == nil ? UIImage(systemName: "photo") : UIImage(data: product.pImage!)
+        barcodeTF.text = product.pBarcode
+        nameTF.text = product.pName
+        descriptionTF.text = product.pDescription
+        priceTF.text = String(product.pPrice)
+        qtyTF.text = String(product.pQty)
+        initTextField()
     }
     
     @IBAction func barcodeScanner2Btn(_ sender: Any) {

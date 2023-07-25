@@ -34,10 +34,6 @@ class ProductCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        
-//        let padding = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
-//        pQty.layer.cornerRadius = 7
-//        pQty.layer.masksToBounds = true
     }
 
 }

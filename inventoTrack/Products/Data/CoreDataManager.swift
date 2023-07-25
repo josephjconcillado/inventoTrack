@@ -80,9 +80,9 @@ extension CoreDataManager {
         save()
     }
     
-    func fetchProducts(sortOption: String) -> [Product] {
+    func fetchProducts() -> [Product] {
         let request: NSFetchRequest<Product> = Product.fetchRequest()
-        let sortDescriptor = NSSortDescriptor(key: sortOption, ascending: true)
+        let sortDescriptor = NSSortDescriptor(key: "pDateCreated", ascending: true)
         request.sortDescriptors = [sortDescriptor]
         return (try? viewContext.fetch(request)) ?? []
     }

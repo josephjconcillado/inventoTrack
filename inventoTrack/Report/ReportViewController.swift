@@ -28,7 +28,7 @@ class ReportViewController: UIViewController {
         override func viewDidLayoutSubviews() {
             super.viewDidLayoutSubviews()
     
-            allProducts = CoreDataManager.shared.fetchProducts(sortOption: "pDateCreated")
+            allProducts = CoreDataManager.shared.fetchProducts()
     
             var entries = [ChartDataEntry]()
             for value in filteredProducts {

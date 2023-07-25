@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		055537262A6A1513001DE13C /* ProductsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055537252A6A1513001DE13C /* ProductsViewModel.swift */; };
+		0555372A2A6C33D5001DE13C /* ProductsViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055537292A6C33D5001DE13C /* ProductsViewControllerExtension.swift */; };
+		0555372C2A6C53C4001DE13C /* ProductsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0555372B2A6C53C4001DE13C /* ProductsModel.swift */; };
 		055BFACE2A68A52C00B61302 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 055BFACD2A68A52C00B61302 /* GoogleSignIn */; };
 		055BFAD02A68A52C00B61302 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 055BFACF2A68A52C00B61302 /* GoogleSignInSwift */; };
 		055BFAD32A68A64000B61302 /* DGCharts in Frameworks */ = {isa = PBXBuildFile; productRef = 055BFAD22A68A64000B61302 /* DGCharts */; };
@@ -43,6 +46,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		055537252A6A1513001DE13C /* ProductsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewModel.swift; sourceTree = "<group>"; };
+		055537292A6C33D5001DE13C /* ProductsViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewControllerExtension.swift; sourceTree = "<group>"; };
+		0555372B2A6C53C4001DE13C /* ProductsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsModel.swift; sourceTree = "<group>"; };
 		0561F55F2A6076EE00B70A20 /* inventoTrack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = inventoTrack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0561F5622A6076EE00B70A20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0561F5642A6076EE00B70A20 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +97,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		055537242A6A14D7001DE13C /* ProductsView */ = {
+			isa = PBXGroup;
+			children = (
+				0561F57E2A6079AA00B70A20 /* ProductsViewController.swift */,
+				055537252A6A1513001DE13C /* ProductsViewModel.swift */,
+				055537292A6C33D5001DE13C /* ProductsViewControllerExtension.swift */,
+				0555372B2A6C53C4001DE13C /* ProductsModel.swift */,
+			);
+			path = ProductsView;
+			sourceTree = "<group>";
+		};
+		055537272A6A3AEE001DE13C /* ProductDetailsView */ = {
+			isa = PBXGroup;
+			children = (
+				0561F5882A607CD600B70A20 /* ProductDetailsViewController.swift */,
+			);
+			path = ProductDetailsView;
+			sourceTree = "<group>";
+		};
+		055537282A6A3AFD001DE13C /* AddProductView */ = {
+			isa = PBXGroup;
+			children = (
+				0561F58A2A607CE700B70A20 /* AddProductViewController.swift */,
+			);
+			path = AddProductView;
+			sourceTree = "<group>";
+		};
 		0561F5562A6076EE00B70A20 = {
 			isa = PBXGroup;
 			children = (
@@ -138,11 +171,11 @@
 		0561F5772A6078B200B70A20 /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				055537282A6A3AFD001DE13C /* AddProductView */,
+				055537272A6A3AEE001DE13C /* ProductDetailsView */,
+				055537242A6A14D7001DE13C /* ProductsView */,
 				0561F5912A607D5400B70A20 /* Data */,
 				0561F5902A607D4800B70A20 /* Barcode */,
-				0561F57E2A6079AA00B70A20 /* ProductsViewController.swift */,
-				0561F5882A607CD600B70A20 /* ProductDetailsViewController.swift */,
-				0561F58A2A607CE700B70A20 /* AddProductViewController.swift */,
 				0561F5992A60E58D00B70A20 /* ProductCollectionViewCell.swift */,
 				0561F59A2A60E58D00B70A20 /* ProductCollectionViewCell.xib */,
 				0561F59F2A6102CA00B70A20 /* ProductTableViewCell.swift */,
@@ -308,6 +341,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0561F5852A6079E900B70A20 /* BackupViewController.swift in Sources */,
+				0555372A2A6C33D5001DE13C /* ProductsViewControllerExtension.swift in Sources */,
 				0561F58F2A607D2C00B70A20 /* AboutSettingsViewController.swift in Sources */,
 				0561F5B12A610D0B00B70A20 /* Sort+CoreDataClass.swift in Sources */,
 				0561F5B22A610D0B00B70A20 /* Sort+CoreDataProperties.swift in Sources */,
@@ -323,7 +357,9 @@
 				0561F5812A6079C500B70A20 /* ReportViewController.swift in Sources */,
 				0561F5B82A61C74900B70A20 /* DisplayView+CoreDataProperties.swift in Sources */,
 				0561F5AD2A610D0B00B70A20 /* Product+CoreDataClass.swift in Sources */,
+				055537262A6A1513001DE13C /* ProductsViewModel.swift in Sources */,
 				0561F5B72A61C74900B70A20 /* DisplayView+CoreDataClass.swift in Sources */,
+				0555372C2A6C53C4001DE13C /* ProductsModel.swift in Sources */,
 				0561F5A62A610B6F00B70A20 /* MyProducts.xcdatamodeld in Sources */,
 				0561F5652A6076EE00B70A20 /* SceneDelegate.swift in Sources */,
 				0561F5B42A610D6F00B70A20 /* CoreDataManager.swift in Sources */,

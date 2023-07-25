@@ -251,10 +251,10 @@
                     </view>
                     <navigationItem key="navigationItem" title="Products" style="editor" id="DVQ-O5-IAj"/>
                     <connections>
-                        <outlet property="collectionView" destination="N1Z-gp-ciQ" id="Qzu-v2-wWZ"/>
+                        <outlet property="collectionView" destination="N1Z-gp-ciQ" id="AiT-lL-nnd"/>
                         <outlet property="notifBck" destination="zYp-k5-VkJ" id="x9i-Ow-VSX"/>
                         <outlet property="notifLbl" destination="SOc-TY-iAc" id="v6A-0P-YsQ"/>
-                        <outlet property="tableView" destination="uEB-h5-s2E" id="qjo-mt-w97"/>
+                        <outlet property="tableView" destination="uEB-h5-s2E" id="qJ8-Ta-CES"/>
                         <segue destination="ZHG-Tt-Z1c" kind="presentation" identifier="productDetailsViewSegue" id="NTL-uH-B8c"/>
                         <segue destination="mfG-jP-iK6" kind="show" identifier="addProductViewSegue" id="ZM9-tN-KmG"/>
                     </connections>
@@ -1499,7 +1499,7 @@
         </designable>
     </designables>
     <inferredMetricsTieBreakers>
-        <segue reference="Rz4-Wk-lSI"/>
+        <segue reference="cmN-hv-wBA"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="addIcon" width="64" height="64"/>
