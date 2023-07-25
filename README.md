@@ -21,15 +21,9 @@ Reports and Analytics: Gain insights into your inventory performance and make in
 To install and run the inventoTrack app on your iOS device or simulator, follow these steps:
 
 1. Clone or download the repository from [GitHub](https://github.com/josephjconcillado/inventoTrack).
-2. Install CocoaPods using a terminal.
-<br>    2.1. sudo gem install cocoapods
-<br>    2.2. cd /path/to/the/folder/inventoTrack
-<br>    2.2. pod install
-3. Open the project in Xcode by double-clicking the `inventoTrack.xcodeproj` file.
-4. Select your target device or simulator from the device menu in Xcode.
-5. Build and run the project using the play button or by pressing ⌘R.
-<br>
-NOTE: If there are warnings, change the target deployment IOS version to the minimum version like 11.0 for each Pods framework that has a warning.
+2. Open the project in Xcode by double-clicking the `inventoTrack.xcodeproj` file.
+3. Select your target device or simulator from the device menu in Xcode.
+4. Build and run the project using the play button or by pressing ⌘R.
 
 ## Usage
 
