@@ -8,7 +8,6 @@
 import UIKit
 import UniformTypeIdentifiers
 import GoogleSignIn
-//import GTMSessionFetcher
 
 class BackupViewController: UIViewController, UIDocumentPickerDelegate {
     
@@ -18,23 +17,23 @@ class BackupViewController: UIViewController, UIDocumentPickerDelegate {
     @IBOutlet weak var restoreGoogleBtn: UIButton!
     @IBOutlet weak var googleDriveImg: UIImageView!
     @IBOutlet weak var offlineImg: UIImageView!
+    let viewModel = BackupViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
-        GIDSignIn.sharedInstance.restorePreviousSignIn { user, error in
-            if error != nil || user == nil {
-                // Show the app's signed-out state.
-                self.uploadGoogleBtn.isEnabled = false
-                self.restoreGoogleBtn.isEnabled = false
-            } else {
-                // Show the app's signed-in state.
+        setup()
+    }
+    
+    func setup() {
+        viewModel.didGoogleSignedIn { signedIn in
+            if signedIn {
                 self.uploadGoogleBtn.isEnabled = true
                 self.restoreGoogleBtn.isEnabled = true
+            } else {
+                self.uploadGoogleBtn.isEnabled = false
+                self.restoreGoogleBtn.isEnabled = false
             }
         }
-        
         UIView.animate(withDuration: 3.0, delay: 0.0, options: [.autoreverse, .repeat], animations: {
             // Update the properties you want to animate
             self.googleDriveImg.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
@@ -105,42 +104,21 @@ class BackupViewController: UIViewController, UIDocumentPickerDelegate {
             return
         }
         // Fetch data from the selected file
-        if let jsonData = fetchDataFromLocalFile(fileURL: fileURL) {
+        if let jsonData = viewModel.fetchDataFromLocalFile(fileURL: fileURL) {
             
             let alert = UIAlertController(title: "inventoTrack", message: "Are you sure you want to restore? Current data will be deleted.", preferredStyle: .alert)
             
             let okayAction = UIAlertAction(title: "OK", style: .default, handler: {(action) in
                 CoreDataManager.shared.deleteAllProduct()
-                self.processJSONData(jsonData)
+                if self.viewModel.processJSONData(jsonData) {
+                    
+                }
             })
             alert.addAction(okayAction)
             alert.addAction(UIAlertAction(title: "Cancel", style: .default,handler: nil))
             present(alert, animated: true, completion: nil)
         }
     }
-    
-    func fetchDataFromLocalFile(fileURL: URL) -> Data? {
-        do {
-            let data = try Data(contentsOf: fileURL)
-            
-            // Make sure you release the security-scoped resource when you finish.
-            defer { fileURL.stopAccessingSecurityScopedResource() }
-            
-            return data
-        } catch let error {
-            showAlert(withTitle: "inventoTrack", message: "Failed to fetch data from local file: \(error)")
-            print("Failed to fetch data from local file: \(error)")
-            return nil
-        }
-    }
-    
-    func processJSONData(_ jsonData: Data) {
-        // Process the fetched JSON data here
-        if CoreDataManager.shared.convertJSONToCoreData(jsonData: jsonData) {
-            showAlert(withTitle: "inventoTrack", message: "Data successfully restored!")
-        }
-    }
-    
     
     @IBAction func uploadToGoogleDrive(_ sender: Any) {
         GIDSignIn.sharedInstance.currentUser?.refreshTokensIfNeeded { user, error in
@@ -173,20 +151,21 @@ class BackupViewController: UIViewController, UIDocumentPickerDelegate {
         let alert = UIAlertController(title: "inventoTrack", message: "Are you sure you want to restore? Current data will be deleted.", preferredStyle: .alert)
         
         let okayAction = UIAlertAction(title: "OK", style: .default, handler: {(action) in
-            GIDSignIn.sharedInstance.currentUser?.refreshTokensIfNeeded { user, error in
-                guard error == nil else { return }
-                guard let user = user else { return }
-                
-                let accessToken = user.accessToken.tokenString
-                
+//            GIDSignIn.sharedInstance.currentUser?.refreshTokensIfNeeded { user, error in
+//                guard error == nil else { return }
+//                guard let user = user else { return }
+//
+//                let accessToken = user.accessToken.tokenString
+//
+//                self.fetchJSONFromGoogleDriveAndRestoreToCoreData(accessToken: accessToken)
+//            }
+            self.viewModel.getAccessToken { accessToken in
                 self.fetchJSONFromGoogleDriveAndRestoreToCoreData(accessToken: accessToken)
             }
         })
         alert.addAction(okayAction)
         alert.addAction(UIAlertAction(title: "Cancel", style: .default,handler: nil))
         present(alert, animated: true, completion: nil)
-        
-        
     }
     
     func createFileInGoogleDrive(accessToken: String, jsonData: Data, fileName: String) {
@@ -239,9 +218,7 @@ class BackupViewController: UIViewController, UIDocumentPickerDelegate {
         
         var request = URLRequest(url: updateURL)
         request.httpMethod = "PATCH"
-        
         request.setValue("Bearer \(accessToken)", forHTTPHeaderField: "Authorization")
-        
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpBody = jsonData
         
@@ -347,7 +324,9 @@ class BackupViewController: UIViewController, UIDocumentPickerDelegate {
                     return
                 }
                 CoreDataManager.shared.deleteAllProduct()
-                processJSONData(fileData)
+                if viewModel.processJSONData(fileData) {
+                    showAlert(withTitle: "inventoTrack", message: "Data successfully restored!")
+                }
                     // Store the data in Core Data
                 
             }
@@ -414,7 +393,7 @@ class BackupViewController: UIViewController, UIDocumentPickerDelegate {
     
     private func showFileExistsAlert(accessToken: String, fileId: String, jsonData: Data){
         DispatchQueue.main.async {
-            let alertController = UIAlertController(title: "inventoTrack", message: "File Already Exists! Overwrite the file?", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "inventoTrack", message: "File Already Exists!\n\nOverwrite the file?", preferredStyle: .alert)
             let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
             let overwriteAction = UIAlertAction(title: "Overwrite", style: .default) { [weak self] _ in
                 self?.updateFileInGoogleDrive(accessToken: accessToken, fileId: fileId, jsonData: jsonData)

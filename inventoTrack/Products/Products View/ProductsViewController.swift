@@ -17,8 +17,6 @@ class ProductsViewController: UIViewController, ProductDetailsViewControllerDele
     var collectionViewFlowLayout: UICollectionViewFlowLayout!
     let viewModel = ProductsViewModel()
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupBarButtonItems()
@@ -30,13 +28,8 @@ class ProductsViewController: UIViewController, ProductDetailsViewControllerDele
         notifBck.isHidden = true
     }
     
-    override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
-    }
     override func viewWillDisappear(_ animated: Bool) {
-        viewModel.manager.save()
-        viewModel.saveDisplayMode()
-        viewModel.saveSortOrder()
+        viewModel.saveAfterViewWillDisappear()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -45,8 +38,7 @@ class ProductsViewController: UIViewController, ProductDetailsViewControllerDele
             if let vc = segue.destination as? ProductDetailsViewController {
                 if let item = sender as? Product {
                     vc.setup(product: item)
-                    vc.delegate = self
-                    
+                    vc.delegate = self    
                 }
             }
         } else if segue.identifier == "addProductViewSegue" {

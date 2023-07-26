@@ -253,4 +253,10 @@ class ProductsViewModel {
         }
     }
     
+    func saveAfterViewWillDisappear(){
+        manager.save()
+        saveDisplayMode()
+        saveSortOrder()
+    }
+    
 }

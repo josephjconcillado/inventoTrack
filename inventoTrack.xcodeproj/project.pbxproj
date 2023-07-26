@@ -40,6 +40,7 @@
 		0561F5AE2A610D0B00B70A20 /* Product+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0561F5A82A610D0B00B70A20 /* Product+CoreDataProperties.swift */; };
 		0561F5B42A610D6F00B70A20 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0561F5B32A610D6F00B70A20 /* CoreDataManager.swift */; };
 		05CD1D102A6F6AE70045ABB7 /* AddProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CD1D0F2A6F6AE70045ABB7 /* AddProductViewModel.swift */; };
+		05CD1D122A717B4B0045ABB7 /* BackupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CD1D112A717B4B0045ABB7 /* BackupViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +76,7 @@
 		0561F5A82A610D0B00B70A20 /* Product+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Product+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		0561F5B32A610D6F00B70A20 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		05CD1D0F2A6F6AE70045ABB7 /* AddProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductViewModel.swift; sourceTree = "<group>"; };
+		05CD1D112A717B4B0045ABB7 /* BackupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +93,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		055537242A6A14D7001DE13C /* ProductsView */ = {
+		055537242A6A14D7001DE13C /* Products View */ = {
 			isa = PBXGroup;
 			children = (
 				0561F57E2A6079AA00B70A20 /* ProductsViewController.swift */,
@@ -99,24 +101,24 @@
 				055537292A6C33D5001DE13C /* ProductsViewControllerExtension.swift */,
 				0555372B2A6C53C4001DE13C /* ProductsModel.swift */,
 			);
-			path = ProductsView;
+			path = "Products View";
 			sourceTree = "<group>";
 		};
-		055537272A6A3AEE001DE13C /* ProductDetailsView */ = {
+		055537272A6A3AEE001DE13C /* Product Details View */ = {
 			isa = PBXGroup;
 			children = (
 				0561F5882A607CD600B70A20 /* ProductDetailsViewController.swift */,
 			);
-			path = ProductDetailsView;
+			path = "Product Details View";
 			sourceTree = "<group>";
 		};
-		055537282A6A3AFD001DE13C /* AddProductView */ = {
+		055537282A6A3AFD001DE13C /* Add Product View */ = {
 			isa = PBXGroup;
 			children = (
 				0561F58A2A607CE700B70A20 /* AddProductViewController.swift */,
 				05CD1D0F2A6F6AE70045ABB7 /* AddProductViewModel.swift */,
 			);
-			path = AddProductView;
+			path = "Add Product View";
 			sourceTree = "<group>";
 		};
 		0561F5562A6076EE00B70A20 = {
@@ -166,10 +168,10 @@
 		0561F5772A6078B200B70A20 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				05CD1D0E2A6F676B0045ABB7 /* ProductViewCell */,
-				055537282A6A3AFD001DE13C /* AddProductView */,
-				055537272A6A3AEE001DE13C /* ProductDetailsView */,
-				055537242A6A14D7001DE13C /* ProductsView */,
+				05CD1D0E2A6F676B0045ABB7 /* Product View Cell */,
+				055537282A6A3AFD001DE13C /* Add Product View */,
+				055537272A6A3AEE001DE13C /* Product Details View */,
+				055537242A6A14D7001DE13C /* Products View */,
 				0561F5912A607D5400B70A20 /* Data */,
 				0561F5902A607D4800B70A20 /* Barcode */,
 			);
@@ -198,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				0561F5842A6079E900B70A20 /* BackupViewController.swift */,
+				05CD1D112A717B4B0045ABB7 /* BackupViewModel.swift */,
 			);
 			path = Backup;
 			sourceTree = "<group>";
@@ -246,7 +249,7 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
-		05CD1D0E2A6F676B0045ABB7 /* ProductViewCell */ = {
+		05CD1D0E2A6F676B0045ABB7 /* Product View Cell */ = {
 			isa = PBXGroup;
 			children = (
 				0561F5992A60E58D00B70A20 /* ProductCollectionViewCell.swift */,
@@ -254,7 +257,7 @@
 				0561F59F2A6102CA00B70A20 /* ProductTableViewCell.swift */,
 				0561F5A02A6102CA00B70A20 /* ProductTableViewCell.xib */,
 			);
-			path = ProductViewCell;
+			path = "Product View Cell";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -353,6 +356,7 @@
 				0561F5AE2A610D0B00B70A20 /* Product+CoreDataProperties.swift in Sources */,
 				0561F5812A6079C500B70A20 /* ReportViewController.swift in Sources */,
 				05CD1D102A6F6AE70045ABB7 /* AddProductViewModel.swift in Sources */,
+				05CD1D122A717B4B0045ABB7 /* BackupViewModel.swift in Sources */,
 				0561F5AD2A610D0B00B70A20 /* Product+CoreDataClass.swift in Sources */,
 				055537262A6A1513001DE13C /* ProductsViewModel.swift in Sources */,
 				0555372C2A6C53C4001DE13C /* ProductsModel.swift in Sources */,

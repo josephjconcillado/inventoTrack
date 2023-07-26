@@ -307,7 +307,7 @@ class AddProductViewController: UIViewController,BarcodeScannerViewControllerDel
             image: image
         )
         
-        let alert = UIAlertController(title: "inventoTrack", message: "Product Successfully Added!\nDo you want to add more product?", preferredStyle: .alert)
+        let alert = UIAlertController(title: "inventoTrack", message: "Product Successfully Added!\n\nDo you want to add more product?", preferredStyle: .alert)
         
         let okayAction = UIAlertAction(title: "Yes", style: .default, handler: {(action) in
             alert.dismiss(animated: true)

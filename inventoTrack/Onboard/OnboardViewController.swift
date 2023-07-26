@@ -61,7 +61,7 @@ class OnboardViewController: UIViewController {
     
     @IBAction func nxtBtn(_ sender: Any) {
         if currentPage == slides.count - 1 {
-            
+            print("End of the slides")
         } else {
             currentPage += 1
             let indexPath = IndexPath(item: currentPage, section: 0)
