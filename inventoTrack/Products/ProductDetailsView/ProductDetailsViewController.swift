@@ -344,10 +344,13 @@ class ProductDetailsViewController: UIViewController, UITextFieldDelegate, Barco
         
         let alert = UIAlertController(title: "inventoTrack", message: "Product Successfully Updated!", preferredStyle: .alert)
         let okayAction = UIAlertAction(title: "OK", style: .default, handler: {(action) in
-            alert.dismiss(animated: true)
-            sender.isHidden = true
-            self.editBtn.isHidden = false
-            self.editBtn.isEnabled = true
+//            alert.dismiss(animated: true)
+//            sender.isHidden = true
+//            self.editBtn.isHidden = false
+//            self.editBtn.isEnabled = true
+//            self.tapToChangeImageLbl.isHidden = true
+//            self.navigationController?.popViewController(animated: true)
+            self.dismiss(animated: true)
         })
         alert.addAction(okayAction)
         present(alert, animated: true, completion: nil)

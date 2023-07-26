@@ -25,6 +25,7 @@ class ProductsViewController: UIViewController, ProductDetailsViewControllerDele
         viewModel.fetchProducts()
         setupView()
         checkItems()
+        viewModel.setupMode(cv: collectionView, tv: tableView)
         notifLbl.isHidden = true
         notifBck.isHidden = true
     }
@@ -116,12 +117,13 @@ class ProductsViewController: UIViewController, ProductDetailsViewControllerDele
         viewModel.setupView(cv: collectionView, tv: tableView)
         viewModel.showAlert = { alertText in
             let alert = UIAlertController(title: "inventoTrack", message: alertText, preferredStyle: .alert)
-            let okAction = UIAlertAction(title: "OK", style: .default) {_ in
+            let okAction = UIAlertAction(title: "Yes", style: .default) {_ in
                 self.viewModel.onOk?()
             }
-            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-            alert.addAction(cancelAction)
+            let cancelAction = UIAlertAction(title: "No", style: .cancel, handler: nil)
             alert.addAction(okAction)
+            alert.addAction(cancelAction)
+            alert.preferredAction = okAction
             self.present(alert, animated: true)
         }
     }

@@ -183,12 +183,12 @@ class ProductsViewModel {
             
             if allAreSelected {
                 rightBarButton.image = UIImage(systemName: "checklist.unchecked")
-                notifLbl.text = "All are deselected!"
+                notifLbl.text = "All unselected!"
                 notificationAnimation(uiLabel: notifLbl, uiBackground: notifBck)
                 allAreSelected =  !allAreSelected
             } else {
                 rightBarButton.image = UIImage(systemName: "checklist.checked")
-                notifLbl.text = "All are selected!"
+                notifLbl.text = "All selected!"
                 notificationAnimation(uiLabel: notifLbl, uiBackground: notifBck)
                 allAreSelected = !allAreSelected
             }

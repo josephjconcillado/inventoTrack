@@ -38,7 +38,6 @@ class AddProductViewController: UIViewController,BarcodeScannerViewControllerDel
     override func viewDidLoad() {
         super.viewDidLoad()
         initTF()
-        
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
         currentImage = imageView
@@ -99,9 +98,9 @@ class AddProductViewController: UIViewController,BarcodeScannerViewControllerDel
         label.textColor = .systemGreen
         if !textField.hasText{
             label.transform = transpose.concatenating(scale)
-//            if label == dollarSymLbl {
-//                dollarSymLbl.isHidden = false
-//            }
+            //            if label == dollarSymLbl {
+            //                dollarSymLbl.isHidden = false
+            //            }
         }
     }
     
@@ -148,6 +147,7 @@ class AddProductViewController: UIViewController,BarcodeScannerViewControllerDel
         self.descriptionTF.text = ""
         self.qtyTF.text = ""
         self.priceTF.text = ""
+        viewStateChanged = false
     }
     
     func enableTextField(){
@@ -282,23 +282,43 @@ class AddProductViewController: UIViewController,BarcodeScannerViewControllerDel
     
     
     @IBAction func addProduct(_ sender: UIButton) {
-    
-//      let tfBarcode = String(Int.random(in: 1..<9999999999))
+        
+        //      let tfBarcode = String(Int.random(in: 1..<9999999999))
         
         let uploadImage = !viewStateChanged ? NSData() as Data : imageView.image?.jpegData(compressionQuality: 0.1)
         
-        CoreDataManager.shared.createProduct(barcode: barcodeTF.text!, name: nameTF.text!, description: descriptionTF.text!, quantity: qtyTF.text!, price: priceTF.text!,image: uploadImage!)
+        guard let barcode = barcodeTF.text,
+              let name = nameTF.text,
+              let description = descriptionTF.text,
+              let quantity = qtyTF.text,
+              let price = priceTF.text,
+              let image = uploadImage
+        else {
+            print("Missing required field values")
+            return
+        }
         
-        //        productData.append(ProductSample(barcode: tfBarcode,name: nameTF.text!, description: descriptionTF.text!, quantity: qtyTF.text!, price: priceTF.text!, image: uploadImage!))
+        CoreDataManager.shared.createProduct(
+            barcode: barcode,
+            name: name,
+            description: description,
+            quantity: quantity,
+            price: price,
+            image: image
+        )
         
-        let alert = UIAlertController(title: "inventoTrack", message: "Product Successfully Added!", preferredStyle: .alert)
+        let alert = UIAlertController(title: "inventoTrack", message: "Product Successfully Added!\nDo you want to add more product?", preferredStyle: .alert)
         
-        let okayAction = UIAlertAction(title: "OK", style: .default, handler: {(action) in
+        let okayAction = UIAlertAction(title: "Yes", style: .default, handler: {(action) in
             alert.dismiss(animated: true)
             self.view.endEditing(true)
             self.initTF()
         })
+        let cancelAction = UIAlertAction(title: "No", style: .default, handler: {(action) in
+            self.navigationController?.popViewController(animated: true)
+        })
         alert.addAction(okayAction)
+        alert.addAction(cancelAction)
         present(alert, animated: true, completion: nil)
     }
     
@@ -364,7 +384,7 @@ class AddProductViewController: UIViewController,BarcodeScannerViewControllerDel
     
     
     func checkForm() {
-        if !barcodeTF.text!.isEmpty && !nameTF.text!.isEmpty &&  !descriptionTF.text!.isEmpty &&  !qtyTF.text!.isEmpty &&  !priceTF.text!.isEmpty  {
+        if !(barcodeTF.text?.isEmpty ?? false) && !(nameTF.text?.isEmpty ?? false) &&  !(descriptionTF.text?.isEmpty ?? false) &&  !(qtyTF.text?.isEmpty ?? false) &&  !(priceTF.text?.isEmpty ?? false)  {
             addBtn.isEnabled = true
         } else {
             addBtn.isEnabled = false
@@ -372,7 +392,7 @@ class AddProductViewController: UIViewController,BarcodeScannerViewControllerDel
     }
     
     func didFindScannedText(text: String) {
-        enterTextField(barcodeTF)
+        enterTextField( barcodeTF)
         barcodeTF.text = text
         barcodeTF.becomeFirstResponder()
         checkForm()

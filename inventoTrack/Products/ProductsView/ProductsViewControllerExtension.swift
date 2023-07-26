@@ -88,7 +88,6 @@ extension ProductsViewController: UITableViewDataSource {
             performSegue(withIdentifier: "productDetailsViewSegue", sender: viewModel.products[indexPath.row])
             
         case .select:
-            print("selected rows after selection: ", tableView.indexPathsForSelectedRows?.count ?? 0)
             viewModel.selectedIndexPath[indexPath] = true
             self.collectionView.reloadData()
         }
@@ -97,7 +96,6 @@ extension ProductsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         
         if viewModel.mMode == .select {
-            print("selected rows after deselection: ", tableView.indexPathsForSelectedRows?.count ?? 0)
             viewModel.selectedIndexPath[indexPath] = false
         }
     }
