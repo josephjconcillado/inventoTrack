@@ -54,7 +54,7 @@ class ProductsViewModel {
             }
         case .dateCreated:
             products.sort {
-                $0.pDateCreated ?? Date() > $1.pDateCreated ?? Date()
+                $0.pDateCreated ?? Date() < $1.pDateCreated ?? Date()
             }
         case .none:
             products.sort {
